@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  nav a {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+
+  .expo {
+    padding: 120px 5%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 15px;
+  }
+
+}
