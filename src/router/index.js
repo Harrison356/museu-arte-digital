@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+
 // Lazy Loading (melhor performance)
 const Home = () => import('../pages/Home.vue')
+const Agendamento = () => import('../pages/Agendamento.vue')
 const Sobre = () => import('../pages/Sobre.vue')
 const Contato = () => import('../pages/Contato.vue')
 const Exhibitions = () => import('../pages/Exhibitions.vue')
-const Admin = () => import('../pages/Admin.vue')
+const Admin = () => import('../pages/AdminAgendamento.vue')
 const NotFound = () => import('../pages/NotFound.vue')
 
 const routes = [
@@ -14,6 +16,12 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: { title: 'Museu da Cidade de Manaus' }
+  },
+  {
+    path: '/Agendamento',
+    name: 'Agendamento',
+    component: Agendamento,
+    meta: { title: 'Agendamento | Museu de Manaus' }
   },
   {
     path: '/sobre',
@@ -35,7 +43,7 @@ const routes = [
   },
   {
     path: '/admin',
-    name: 'Admin',
+    name: 'AdminAgendamento',
     component: Admin,
     meta: { requiresAuth: true, title: 'Admin | Museu de Manaus' }
   },

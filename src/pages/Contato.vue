@@ -13,13 +13,13 @@ function enviar() {
 
 <template>
   <section class="contato">
-    <h1>Agende sua Visita</h1>
+    <h1>Contato</h1>
 
     <form @submit.prevent="enviar">
       <input v-model="nome" placeholder="Nome" required />
-      <input type="date" v-model="data" required />
-      <input type="number" v-model="pessoas" min="1" />
-      <button type="submit">Agendar</button>
+      <input v-model="nome" placeholder="Instituição" required />
+      <input  type="email" placeholder="Email" required />
+      <button type="submit">Enviar</button>
     </form>
 
     <p v-if="mensagem" class="sucesso">{{ mensagem }}</p>

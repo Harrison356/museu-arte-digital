@@ -13,7 +13,7 @@ import { RouterView, RouterLink } from 'vue-router'
 
       <nav class="nav">
         <RouterLink to="/">Início</RouterLink>
-        <RouterLink to="/exhibitions">Exposições</RouterLink>
+        <RouterLink to="/Agendamento">Agendamento</RouterLink>
         <RouterLink to="/sobre">Sobre</RouterLink>
         <RouterLink to="/contato">Contato</RouterLink>
       </nav>
@@ -38,10 +38,6 @@ import { RouterView, RouterLink } from 'vue-router'
         <div class="buttons">
           <RouterLink to="/exhibitions" class="primary">
             Ver Exposições →
-          </RouterLink>
-
-          <RouterLink to="/contato" class="outline">
-            Agendar Visita →
           </RouterLink>
         </div>
       </div>
@@ -73,6 +69,8 @@ body {
 
 .header {
   position: fixed;
+  top: 0;              /* 👈 ESSENCIAL */
+  left: 0;             /* garante alinhamento */
   width: 100%;
   padding: 20px 60px;
   display: flex;
@@ -85,7 +83,7 @@ body {
 }
 
 .logo {
-  height: 55px;
+  height: 60px;
 }
 
 .nav a {
@@ -103,9 +101,6 @@ body {
 /* HERO */
 
 .hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
   margin-top: 90px;
 }
 
