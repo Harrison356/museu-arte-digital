@@ -11,7 +11,8 @@ const exposicoes = [
   {
     titulo: "Casas - Cabeças",
     imagem: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
-    descricao: "Expressões modernas da Amazônia."
+    descricao: "Expressões modernas da Amazônia.",
+    rota: "/cabecas"
   },
   {
     titulo: "Banho de Origens",

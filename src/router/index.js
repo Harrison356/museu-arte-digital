@@ -10,6 +10,7 @@ const Exhibitions = () => import('../pages/Exhibitions.vue')
 const Admin = () => import('../pages/AdminAgendamento.vue')
 const NotFound = () => import('../pages/NotFound.vue')
 const Afluente = () => import('../pages/Exibitions/Afluente.vue')
+const Cabecas = () => import('../pages/Exibitions/Cabecas.vue')
 const Videos = () => import('../pages/Exibitions/Afluente/Videos.vue')
 
 
@@ -60,6 +61,11 @@ const routes = [
   path: '/afluente',
   name: 'Afluente',
   component: Afluente
+},
+  {
+  path: '/cabecas',
+  name: 'Cabecas',
+  component: Cabecas
 },
   {
   path: '/videos',

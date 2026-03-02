@@ -48,7 +48,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="afluente">
+  <section class="cabecas">
 
     <div class="container">
 
@@ -82,7 +82,7 @@ onMounted(() => {
         <!-- IMAGENS -->
         <div class="imagens fade-in">
 
-  <router-link to="/videos" class="card">
+  <router-link to="/banho-de-origens" class="card">
     <img src="/src/assets/mapa-antigo.png" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].videos }}</h3>
@@ -90,7 +90,14 @@ onMounted(() => {
     </div>
   </router-link>
 
-  <router-link to="/linha-do-tempo" class="card">
+  <router-link to="/casas-cabecas" class="card">
+    <img src="/src/assets/linha-tempo.png" alt="">
+    <div class="overlay">
+      <h3>{{ textos[idioma].linha }}</h3>
+      <span>{{ textos[idioma].linhaDesc }}</span>
+    </div>
+  </router-link>
+  <router-link to="/arquitetura" class="card">
     <img src="/src/assets/linha-tempo.png" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].linha }}</h3>
@@ -109,8 +116,8 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.afluente {
-  background: linear-gradient(to bottom, #d9b36a, #e8c98b);
+.cabecas {
+  background: linear-gradient(to bottom, #39b2c7, #64f0e9);
   padding: 120px 0;
 }
 
