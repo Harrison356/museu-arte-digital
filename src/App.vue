@@ -68,7 +68,7 @@ body {
 /* HEADER */
 
 .header {
-  position: fixed;
+  position:static;
   top: 0;              /* 👈 ESSENCIAL */
   left: 0;             /* garante alinhamento */
   width: 100%;
@@ -83,7 +83,9 @@ body {
 }
 
 .logo {
-  height: 60px;
+  height: 120px;
+  width: 150px;
+  
 }
 
 .nav a {

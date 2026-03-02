@@ -9,6 +9,10 @@ const Contato = () => import('../pages/Contato.vue')
 const Exhibitions = () => import('../pages/Exhibitions.vue')
 const Admin = () => import('../pages/AdminAgendamento.vue')
 const NotFound = () => import('../pages/NotFound.vue')
+const Afluente = () => import('../pages/Exibitions/Afluente.vue')
+const Videos = () => import('../pages/Exibitions/Afluente/Videos.vue')
+
+
 
 const routes = [
   {
@@ -51,7 +55,17 @@ const routes = [
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: NotFound
-  }
+  },
+  {
+  path: '/afluente',
+  name: 'Afluente',
+  component: Afluente
+},
+  {
+  path: '/videos',
+  name: 'Videos',
+  component: Videos
+}
 ]
 
 const router = createRouter({
