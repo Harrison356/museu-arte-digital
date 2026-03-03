@@ -6,7 +6,7 @@ const idioma = ref('pt')
 
 const textos = {
   pt: {
-    titulo: "AFLUENTES DOS RIOS",
+    titulo: "CASAS - CABEÇAS",
     subtitulo: "A história que flui como um rio",
     p1: "A história da cidade de Manaus está diretamente relacionada à singularidade de sua localização geográfica que, desde tempos pré-coloniais, lhe confere uma condição privilegiada no processo de ocupação da região.",
     p2: "Ela é a única cidade no mundo circunscrita em meio à maior biodiversidade do planeta e na confluência de dois gigantescos rios – o Negro e o Solimões.",
@@ -97,13 +97,7 @@ onMounted(() => {
       <span>{{ textos[idioma].linhaDesc }}</span>
     </div>
   </router-link>
-  <router-link to="/arquitetura" class="card">
-    <img src="/src/assets/linha-tempo.png" alt="">
-    <div class="overlay">
-      <h3>{{ textos[idioma].linha }}</h3>
-      <span>{{ textos[idioma].linhaDesc }}</span>
-    </div>
-  </router-link>
+  
 
 </div>
 
