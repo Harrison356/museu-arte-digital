@@ -4,44 +4,44 @@ import { RouterLink } from 'vue-router'
 const exposicoes = [
   {
     titulo: "Afluente dos Tempos",
-    imagem: "https://images.unsplash.com/photo-1518998053901-5348d3961a04",
+    imagem: "https://www.amazonasemais.com.br/wp-content/uploads/2019/04/museu-cidade-9.jpg",
     descricao: "História e identidade cultural.",
     rota: "/afluente"
   },
   {
     titulo: "Casas - Cabeças",
-    imagem: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+    imagem: "https://veja.abril.com.br/wp-content/uploads/2018/10/whatsapp-image-2018-10-23-at-23-40-32-1.jpeg?crop=1&resize=1212,909",
     descricao: "Expressões modernas da Amazônia.",
     rota: "/cabecas"
   },
   {
     titulo: "Banho de Origens",
-    imagem: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    imagem: "https://www.amazonasemais.com.br/wp-content/uploads/2019/04/museu-cidade-8.jpg",
     descricao: "Tradições vivas."
   },
   {
     titulo: "Sala dos Prefeitos",
-    imagem: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    imagem: "https://www.amazonasemais.com.br/wp-content/uploads/2019/04/museu-cidade-7.jpg",
     descricao: "História política da cidade."
   },
   {
     titulo: "Anéis de Crescimento",
-    imagem: "https://images.unsplash.com/photo-1518998053901-5348d3961a04",
+    imagem: "https://www.amazonasemais.com.br/wp-content/uploads/2019/04/museu-da-cidade-5.jpg",
     descricao: "Evolução urbana de Manaus."
   },
   {
     titulo: "Mercado",
-    imagem: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+    imagem: "https://casadedoda.com/wp-content/uploads/2019/09/museu-da-cidade-manaus-4-1024x577.jpg",
     descricao: "Cultura e comércio tradicional."
   },
   {
     titulo: "Rios Voadores",
-    imagem: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    imagem: "https://casadedoda.com/wp-content/uploads/2019/09/museu-da-cidade-manaus-10-1024x577.jpg",
     descricao: "Fenômenos naturais da Amazônia."
   },
   {
     titulo: "Arqueologia",
-    imagem: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    imagem: "https://casadedoda.com/wp-content/uploads/2019/09/museu-da-cidade-manaus-11-1024x577.jpg",
     descricao: "Vestígios históricos e descobertas."
   }
 ]
