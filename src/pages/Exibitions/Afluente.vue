@@ -9,8 +9,8 @@ const textos = {
     titulo: "AFLUENTES DOS RIOS",
     subtitulo: "A história que flui como um rio",
     p1: "A história da cidade de Manaus está diretamente relacionada à singularidade de sua localização geográfica que, desde tempos pré-coloniais, lhe confere uma condição privilegiada no processo de ocupação da região.",
-    p2: "Ela é a única cidade no mundo circunscrita em meio à maior biodiversidade do planeta e na confluência de dois gigantescos rios – o Negro e o Solimões.",
-    p3: "A proposta deste espaço é proporcionar uma experiência sensorial e cognitiva do fluxo temporal, revelando a história da cidade desde os primeiros indícios de ocupação humana até os dias atuais.",
+    p2: "Ela é a única cidade no mundo circunscrita em meio à maior biodiversidade do planeta e na confluênciade dois gigantescos rios - o Negro e o Solimões. Esse encontro das águas estabelece os fluxos de ocupação que permitiram a fundação da capital do estado do Amazonas. Uma linha do tempo é como um rio: flui ininterruptamente, carregando distintas camadas de tempo, as quais ora se sobrepõem, ora se distinguem e voltam a se reencontrar, como em um circuito fechado de águas correntes.",
+    p3: "A proposta central para este espaço é proporcionar uma experiência ao mesmo tempo sensorial e cognitiva do fluxo temporal, elaborando, sucessivamente, a história da cidade, desde os primeiros indícios de ocupação humana da região (há pelo menos 9.000 anos) até os dias atuais. Por meio de um sistema de projeções interativas sobre a água, um grande fluxo de informações, distribuídas em tópicos e em diferentes linguagens, é acionado pelo toque das mãos dos visitantes. Imagens, vídeos e textos confluem nas águas e revelam a história de Manaus.",
     videos: "VÍDEOS",
     videosDesc: "Experiência audiovisual interativa",
     linha: "LINHA DO TEMPO",
@@ -19,9 +19,9 @@ const textos = {
   en: {
     titulo: "TRIBUTARY RIVERS",
     subtitulo: "History that flows like a river",
-    p1: "The history of the city of Manaus is directly related to the uniqueness of its geographical location which, since pre-colonial times, has given it a privileged condition in the occupation process of the region.",
-    p2: "It is the only city in the world surrounded by the greatest biodiversity on the planet and located at the confluence of two gigantic rivers – Negro and Solimões.",
-    p3: "The purpose of this space is to provide a sensory and cognitive experience of temporal flow, revealing the history of the city from the first signs of human occupation to the present day.",
+    p1: "The history of the city of Manaus is directly related to the uniqueness of its geographical location, which, since pre-colonial times, has given it a privileged condition in the process of occupation of the region.",
+    p2: "It is the only city in the world circumscribed amidst the greatest biodiversity on the planet and at the confluence of two gigantic rivers - the Negro and the Solimões. This meeting of waters establishes the flows of occupation that allowed the founding of the capital of the state of Amazonas. A timeline is like a river: it flows uninterruptedly, carrying distinct layers of time, which sometimes overlap, sometimes become distinct and meet again, as in a closed circuit of flowing waters.",
+    p3: "The central proposal for this space is to provide a sensory and cognitive experience of the temporal flow, elaborating, successively, the history of the city, from the first signs of human occupation of the region (at least 9,000 years ago) to the present day. Through an interactive projection system on the water, a large flow of information, distributed across topics and in different languages, is activated by the touch of visitors' hands. Images, videos, and texts converge on the water and reveal the history of Manaus.",
     videos: "VIDEOS",
     videosDesc: "Interactive audiovisual experience",
     linha: "TIMELINE",
@@ -90,7 +90,7 @@ onMounted(() => {
     </div>
   </router-link>
 
-  <router-link to="/linha-do-tempo" class="card">
+  <router-link to="/linhatempo" class="card">
     <img src="/src/assets/linha-tempo.png" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].linha }}</h3>

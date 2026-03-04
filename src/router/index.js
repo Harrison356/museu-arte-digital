@@ -12,6 +12,7 @@ const NotFound = () => import('../pages/NotFound.vue')
 const Afluente = () => import('../pages/Exibitions/Afluente.vue')
 const Cabecas = () => import('../pages/Exibitions/Cabecas.vue')
 const Videos = () => import('../pages/Exibitions/Afluente/Videos.vue')
+const LinhaTempo = () => import('../pages/Exibitions/Afluente/linhatempo.vue')
 
 
 
@@ -51,13 +52,7 @@ const routes = [
     name: 'AdminAgendamento',
     component: Admin,
     meta: { requiresAuth: true, title: 'Admin | Museu de Manaus' }
-  },
-  {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: NotFound
-  },
-  {
+  },{
   path: '/afluente',
   name: 'Afluente',
   component: Afluente
@@ -71,7 +66,18 @@ const routes = [
   path: '/videos',
   name: 'Videos',
   component: Videos
-}
+},
+  {
+  path: '/linhatempo',
+  name: 'LinhaTempo',
+  component: LinhaTempo
+},
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFound
+  }
+  
 ]
 
 const router = createRouter({
