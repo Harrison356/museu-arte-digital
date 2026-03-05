@@ -307,6 +307,62 @@ const timeline = ref([
       texto:
         "The city's landscape begins to change with new buildings. The Municipal Palace (now the Paço da Liberdade), the Provincial Palace, and the Parish Church of Our Lady of the Conception are inaugurated, still in the 1870s. The first pavilion of the emblematic Municipal Market of Manaus (the then New Market) is inaugurated in 1883."
     }
+  },
+  {
+    id: 17,
+    video: true,
+    pt: {
+      ano: "1890-1912",
+      texto:
+        "A demanda internacional por borracha, matéria-prima utilizada na fabricação de produtos como pneus, seringas, luvas cirúrgicas, cabos elétricos, etc., cresceu significativamente no final do século XIX. Nesse cenário, Manaus emergiu como o principal centro de comércio de borracha no interior da Amazônia e, em 1900, passou a controlar o tráfego de produtos de exportação do Amazonas."
+    },
+    en: {
+      ano: "1890-1912",
+      texto:
+        "International demand for rubber, a raw material used in the manufacture of products such as tires, syringes, surgical gloves, electrical cables, etc., grew significantly at the end of the 19th century. In this scenario, Manaus emerged as the main center for rubber trade in the interior Amazon and, in 1900, came to control the trafficking of export products from Amazonas."
+    }
+  },
+  {
+    id: 18,
+    video: true,
+    pt: {
+      ano: "1890-1912",
+      texto:
+        "Manaus vive sua belle époque e passa por grandes transformações urbanas, sociais e culturais. Entre 1892 e 1896, o então governador, Eduardo Ribeiro, realiza um ambicioso projeto de planejamento urbano: constrói pontes de ferro sobre riachos, abre ruas e avenidas, retoma a construção do Teatro Amazonas, inicia a construção do Palácio da Justiça, entre outras obras."
+    },
+    en: {
+      ano: "1890-1912",
+      texto:
+        "Manaus enjoys its belle époque and undergoes major urban, social, and cultural transformations. Between 1892 and 1896, the then governor, Eduardo Ribeiro, carries out an ambitious urban planning project: he builds iron bridges over streams, opens streets and avenues, resumes the construction of the Amazonas Theater, begins the construction of the Palace of Justice, among other works."
+    }
+  },
+  {
+    id: 19,
+    video: true,
+    pt: {
+      ano: "1890-1912",
+      texto:
+        "Na virada do século e nos primeiros anos do século XX, destaca-se a participação de empresas inglesas em grandes projetos de infraestrutura – como a construção do porto flutuante de Manaus pela empresa Manaos Harbor, iniciada em 1902 – e em serviços como comunicação, eletricidade, transporte público, saneamento básico, entre outros."
+    },
+    en: {
+      ano: "1890-1912",
+      texto:
+        "At the turn of the century and in the early years of the 20th century, the participation of English companies in major infrastructure projects stands out - such as the construction of the floating port of Manaus by the Manaos Harbor company, begun in 1902 - and in services such as communication, electricity, public transport, basic sanitation, among others."
+    }
+  },
+  {
+    id: 20,
+    video: true,
+    pt: {
+      ano: "1890-1912",
+      texto:
+        "Na década de 1890, Manaus começou a ter uma cena cultural significativa. Temporadas de ópera e a estreia de Hamlet no Eden-Teatro, na Praça Dom Pedro II, espetáculos de ilusionismo e a inauguração do monumental Teatro Amazonas são alguns dos seus destaques. Em 1907, surgiu o primeiro cinema de rua da capital, o Cassino Teatro Julieta (futuro Cine Alcázar e Cine Guarany)."
+    },
+    en: {
+      ano: "1890-1912",
+      texto:
+        "In the 1890s, Manaus began to have a significant cultural scene. Opera seasons and the premiere of Hamlet at the Eden-Teatro, in Praça Dom Pedro II, illusionist shows and the inauguration of the monumental Teatro Amazonas are some of its highlights. In 1907, the first street cinema in the capital appeared, the Cassino Teatro Julieta (future Cine Alcazar and Cine Guarany)."
+    }
   }
 ])
 
