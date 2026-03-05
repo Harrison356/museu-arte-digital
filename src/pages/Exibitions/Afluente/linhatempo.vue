@@ -675,18 +675,22 @@ function prev() {
 }
 
 .lang-switch button {
-  background: transparent;
+  background-color: #d8b06a;
   border: none;
+  margin-top: 10px;
   margin-left: 10px;
   font-weight: bold;
   cursor: pointer;
   color: rgb(0, 0, 0);
   opacity: 0.6;
+  padding: 7px 7px 7px 7px;
+  border-radius: 6px;
 }
 
 .lang-switch .active {
   opacity: 1;
-  border-bottom: 2px solid rgb(255, 164, 164);
+  border: 2px 2px 2px 2px solid rgb(0, 0, 0);
+  
 }
 .video-circle {
   margin-top: auto;
