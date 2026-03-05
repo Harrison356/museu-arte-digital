@@ -338,7 +338,7 @@ const timeline = ref([
   },
   {
     id: 19,
-    video: true,
+    video: false,
     pt: {
       ano: "1890-1912",
       texto:
@@ -352,7 +352,7 @@ const timeline = ref([
   },
   {
     id: 20,
-    video: true,
+    video: false,
     pt: {
       ano: "1890-1912",
       texto:
@@ -362,6 +362,258 @@ const timeline = ref([
       ano: "1890-1912",
       texto:
         "In the 1890s, Manaus began to have a significant cultural scene. Opera seasons and the premiere of Hamlet at the Eden-Teatro, in Praça Dom Pedro II, illusionist shows and the inauguration of the monumental Teatro Amazonas are some of its highlights. In 1907, the first street cinema in the capital appeared, the Cassino Teatro Julieta (future Cine Alcazar and Cine Guarany)."
+    }
+  },
+  {
+    id: 21,
+    video: false,
+    pt: {
+      ano: "1909",
+      texto:
+        "Um dos frutos do ciclo da borracha foi a criação, em 17 de janeiro de 1909, da Escola Universitária Livre de Manaus. A primeira universidade do país instalou-se provisoriamente no Agrupamento Escolar do Saldanha Marinho. Em 1913, a Escola Universitária Livre de Manaus passou a ser conhecida como Universidade de Manaus."
+    },
+    en: {
+      ano: "1909",
+      texto:
+        "One of the fruits of the rubber boom was the creation, on January 17, 1909, of the Free University School of Manaus. The country's first university was provisionally installed in the Saldanha Marinho School Group. In 1913, the Free University School of Manaus became known as the University of Manaus."
+    }
+  },
+  {
+    id: 22,
+    video: false,
+    pt: {
+      ano: "1913",
+      texto:
+        "Em 1913, devido a manobras dos proprietários do capital internacional, a produção das plantações de borracha inglesas na Ásia ultrapassou a das plantações brasileiras e assumiu a liderança no mercado internacional da borracha. As exportações de borracha da Amazônia caíram drasticamente e nunca mais se recuperaram aos níveis anteriores. A economia do Amazonas entrou em um período de forte declínio."
+    },
+    en: {
+      ano: "1913",
+      texto:
+        "In 1913, due to maneuvers by the owners of international capital, the production of English rubber plantations in Asia surpassed that of Brazilian rubber plantations and gained leadership in the international rubber market. Amazonian rubber exports fell dramatically and never recovered to previous levels. The economy of Amazonas entered a period of sharp decline."
+    }
+  },
+  {
+    id: 23,
+    video: false,
+    pt: {
+      ano: "1920-1930",
+      texto:
+        "Em 23 de julho de 1924, jovens oficiais do Exército depuseram o governo corrupto e nepotista de César do Rêgo Monteiro e proclamaram o tenente Alfredo Augusto Ribeiro Júnior como governador do Amazonas. Durante seu breve governo de 36 dias, ele confiscou bens e objetos de valor de origem duvidosa e, com eles, criou o imposto de resgate, pagando os salários de servidores públicos que estavam com mais de um ano de atraso."
+    },
+    en: {
+      ano: "1920-1930",
+      texto:
+        "On July 23, 1924, young Army officers ousted the corrupt and nepotistic government of César do Rêgo Monteiro and proclaimed Lieutenant Alfredo Augusto Ribeiro Junior as governor of Amazonas. During his brief 36-day government, he confiscated assets and valuables of unproven origin and, with them, created the redemption tax, paying the salaries of public employees that were more than a year in arrears."
+    }
+  },
+  {
+    id: 24,
+    video: true,
+    pt: {
+      ano: "1920-1930",
+      texto:
+        "Na esteira do modernismo brasileiro e das aspirações por uma identidade nacional, o filme (No Paiz das Amazona), de Silvino Santos — o primeiro registro cinematográfico da Amazônia — conquistou o público nacional e internacional após sua estreia em 1922 no Rio de Janeiro. Cópias do filme, com legendas em inglês e francês, foram produzidas para promover o Brasil no exterior."
+    },
+    en: {
+      ano: "1920-1930",
+      texto:
+        "In the wake of Brazilian modernism and aspirations for national identity, the film (No Paiz das Amazonas) (In the Land of the Amazons), by Silvino Santos - the first cinematic record of the Amazon - won over national and international audiences after its premiere in 1922 in Rio de Janeiro. Copies of the film, with English and French subtitles, were produced to promote Brazil abroad."
+    }
+  },
+  {
+    id: 25,
+    video: false,
+    pt: {
+      ano: "1930-1940",
+      texto:
+        "O movimento latifundiário (década de 1920), fundado pelo professor Álvaro Maia, exerceu forte influência na década seguinte sobre os alunos e professores do Ginásio Amazonense. Em 12 de agosto de 1930, a polícia do governador Dorval Porto invadiu o ginásio e prendeu os estudantes que protestavam contra o abuso de poder ocorrido no dia anterior durante a manifestação em homenagem a João Pessoa. O episódio ficou conhecido como a Revolução do Ginásio."
+    },
+    en: {
+      ano: "1930-1940",
+      texto:
+        "The landowning movement (1920s), founded by Professor Álvaro Maia, exerted a strong influence in the following decade on students and teachers at the Gymnasio Amazonense. On August 12, 1930, the police of Governor Dorval Porto invaded the gymnasium and arrested the students who were protesting against the abuse of power that had occurred the previous day during the rally in honor of João Pessoa. The episode became known as the Gymnasium Revolution."
+    }
+  },
+  {
+    id: 26,
+    video: false,
+    pt: {
+      ano: "1942-1945",
+      texto:
+        "Durante a Segunda Guerra Mundial, o acesso à borracha asiática foi bloqueado pelos japoneses. Em 1942, os EUA assinaram um dos Acordos de Washington com o Brasil, comprometendo-se a comprar exclusivamente o excedente da produção brasileira de borracha. A economia do Norte do país se reaqueceu brevemente e, com o fim da guerra e do capital americano, sofreu sérias perdas. Muitos soldados da borracha retornaram ao Nordeste."
+    },
+    en: {
+      ano: "1942-1945",
+      texto:
+        "During World War II, access to Asian rubber was blocked by the Japanese. In 1942, the US signed one of the Washington agreements with Brazil, in which they committed to buying the surplus Brazilian rubber production exclusively. The economy of the North of the country briefly reheated and, with the end of the war and American capital, suffered serious losses. Many rubber soldiers returned to the Northeast."
+    }
+  },
+  {
+    id: 27,
+    video: true,
+    pt: {
+      ano: "1950-1960",
+      texto:
+        "Empreendedores locais garantem a sobrevivência e a revitalização da economia amazônica investindo em setores industriais promissores. Em 1952, a Companhia de Petróleo da Amazônia (Copam) foi fundada pelo empresário Isaac Sabbá. A Refinaria de Petróleo da COPAM, localizada em Manaus, iniciou suas operações em 1956 e foi inaugurada em 1957."
+    },
+    en: {
+      ano: "1950-1960",
+      texto:
+        "Local entrepreneurs ensure the survival and revive of the Amazonas economy by investing in promising industrial sectors. In 1952, the Companhia de Petróleo da Amazônia (Copam) was established by businessman Isaac Sabbá. The COPAM Oil Refinery, located in Manaus, began operating in 1956 and was inaugurated in 1957."
+    }
+  },
+  {
+    id: 28,
+    video: true,
+    pt: {
+      ano: "1950-1960",
+      texto:
+        "Durante o mesmo período, cresceram os investimentos na produção de juta e nas indústrias de fiação e tecelagem. A empresa brasileira de fiação e tecelagem de juta, BrasilJuta, foi criada por Adalberto Vale, com sede em Manaus. A juta já estava aclimatada à região amazônica desde a década de 1930, trazida pelos primeiros imigrantes japoneses que se estabeleceram na região."
+    },
+    en: {
+      ano: "1950-1960",
+      texto:
+        "During the same period, investments in jute production and spinning and weaving industries grew. The Brazilian Jute Spinning and Weaving Company, BrasilJuta, was created by Adalberto Vale, with its headquarters in Manaus. Jute had been acclimatized to the Amazon region since the 1930s by the first Japanese immigrants to settle in the region."
+    }
+  },
+  {
+    id: 29,
+    video: true,
+    pt: {
+      ano: "1950-1960",
+      texto:
+        "Em 1952, Getúlio Vargas criou por decreto o Instituto Nacional de Pesquisas da Amazônia (INPA), com o objetivo de promover estudos sobre a geologia, a fauna, a antropologia e outros recursos naturais e condições de vida da região amazônica. O INPA foi fundado em Manaus em 1954 pelo cientista Olympio da Fonseca, seu primeiro diretor."
+    },
+    en: {
+      ano: "1950-1960",
+      texto:
+        "In 1952, Getúlio Vargas created by decree the National Institute for Amazonian Research, INPA, with the objective of promoting studies of the geology, fauna, anthropology, and other natural resources and living conditions of the Amazon region. INPA was established in Manaus in 1954 by the scientist Olympio da Fonseca, its first director."
+    }
+  },
+  {
+    id: 30,
+    video: true,
+    pt: {
+      ano: "1950-1960",
+      texto:
+        "O Clube da Meia-Noite, movimento artístico-literário formado por poetas, escritores, intelectuais e artistas de Manaus — como Jorge Tufic, Anísio Mello, Luiz Bacellar, Elson Farias e o pintor Moacir de Andrade — foi oficialmente fundado em 1954, e seu manifesto foi publicado na Revista Madrugada I em 1955. O Clube teve um impacto significativo no cenário cultural de Manaus nas décadas seguintes."
+    },
+    en: {
+      ano: "1950-1960",
+      texto:
+        "The Midnight Club, an artistic-literary movement formed by poets, writers, intellectuals, and artists from Manaus—such as Jorge Tufic, Anísio Mello, Luiz Bacellar, Elson Farias, and the painter Moacir de Andrade—was officially founded in 1954, and its manifesto was published in Revista Madrugada I in 1955. The Club had a significant impact on the cultural scene of Manaus in the following decades."
+    }
+  },
+  {
+    id: 31,
+    video: true,
+    pt: {
+      ano: "1960-1970",
+      texto:
+        "Em 1962, foi criada a Universidade Federal do Amazonas (UFAM). Sua fundação ocorreu em 17 de janeiro de 1965, em homenagem à data de criação, em 1909, da Universidade Livre de Manaus. A Faculdade de Direito, a Faculdade de Filosofia, Ciências e Letras e a Faculdade de Ciências Econômicas do Amazonas foram incorporadas, e foram criadas as Faculdades de Engenharia, Farmácia e Odontologia, e Medicina."
+    },
+    en: {
+      ano: "1960-1970",
+      texto:
+        "In 1962, the Federal University of Amazonas (UFAM) was created. It was established on January 17, 1965, in honor of the date of the creation, in 1909, of the Free University of Manaus. The Faculty of Law, the Faculty of Philosophy, Sciences and Letters, and the Faculty of Economic Sciences of Amazonas were absorbed, and the Faculties of Engineering, Pharmacy and Dentistry, and Medicine were introduced."
+    }
+  },
+  {
+    id: 32,
+    video: true,
+    pt: {
+      ano: "1960-1970",
+      texto:
+        "Em 1967, o governo federal reestruturou a Zona Franca de Manaus, criada dez anos antes, e instituiu um modelo de incentivos fiscais com o objetivo de estabelecer um polo industrial, comercial e agropecuário na Amazônia. Na década de 1970, com o fomento da indústria nacional de componentes e suprimentos, a indústria de montagem cresceu em Manaus e teve início a construção do Distrito Industrial."
+    },
+    en: {
+      ano: "1960-1970",
+      texto:
+        "In 1967, the federal government restructured the Manaus Free Trade Zone, created ten years earlier, and instituted a model of tax incentives aimed at establishing an industrial, commercial, and agricultural hub in the Amazon. In the 1970s, with the promotion of the national industry of components and supplies, the assembly industry grew in Manaus and the construction of the Industrial District began."
+    }
+  },
+  {
+    id: 33,
+    video: true,
+    pt: {
+      ano: "1960-1970",
+      texto:
+        "Na década de 1960, ocorreram as primeiras Feiras de Belas Artes e Festivais Culturais de Manaus, bem como eventos de vanguarda ao ar livre, como poesia murais e manifestações de arte urbana, promovidos pelo Clube da Madrugada. Um dos artistas mais proeminentes desse período foi Hahnemann Bacelar (1948-1971), grande expoente das artes visuais no Amazonas."
+    },
+    en: {
+      ano: "1960-1970",
+      texto:
+        "In the 1960s, the first Fine Arts Fairs and Cultural Festivals of Manaus took place, as well as avant-garde outdoor events, such as wall poetry and street art manifestations, promoted by the Clube da Madrugada. One of the most prominent artists in this period is Hahnemann Bacelar (1948-1971), a great exponent of the visual arts in Amazonas."
+    }
+  },
+  {
+    id: 34,
+    video: true,
+    pt: {
+      ano: "1960-1970",
+      texto:
+        "No campo cinematográfico, o Clube da Madrugada promoveu o 1º Festival de Cinema Amador do Amazonas em 1967, no qual o curta-metragem Carniça, de Normandy Litaiff, foi premiado. As atividades do cineclube na cidade foram impulsionadas, sobretudo, por Cosme Alves Neto, criador do 1º Festival de Cinema do Norte em 1969, marcado pela redescoberta da obra de Silvino Santos."
+    },
+    en: {
+      ano: "1960-1970",
+      texto:
+        "In the cinematic field, the Clube da Madrugada promoted the 1st Amateur Film Festival of Amazonas in 1967, in which the short film Carniça by Normandy Litaiff was awarded. The film club activities in the city were boosted, above all, by Cosme Alves Neto, creator of the 1st North Film Festival in 1969, marked by the rediscovery of the work of Silvino Santos."
+    }
+  },
+  {
+    id: 35,
+    video: false,
+    pt: {
+      ano: "1970-1990",
+      texto:
+        "Entre a produção literária do Amazonas, entre os anos de 1970 e 1990, destacam-se autores de forte expressão regional, como Márcio Souza, Zemaria Pinto e, particularmente, Milton Hatoum, reconhecido nacional e internacionalmente pela qualidade estética e caráter universal de seus romances. Em 1989, publicou seu primeiro romance, Relato de um certo Oriente."
+    },
+    en: {
+      ano: "1970-1990",
+      texto:
+        "Among the literary production of Amazonas, between the years 1970 and 1990, stand out authors of strong regional expression, such as Márcio Souza, Zemaria Pinto and, particularly, Milton Hatoum, recognized nationally and internationally for the aesthetic quality and universal character of his novels. In 1989, he published his first novel, Relato de um certo Oriente (Report of a Certain Orient)."
+    }
+  },
+  {
+    id: 36,
+    video: false,
+    pt: {
+      ano: "1997",
+      texto:
+        "Em 1997, a Orquestra Filarmônica do Amazonas foi criada pelo maestro Júlio Medaglia, juntamente com a Companhia de Dança e o Coro do Amazonas. Inicialmente, esses grupos artísticos eram compostos principalmente por artistas do Leste Europeu, e hoje também incluem membros de outras regiões. Desde então, o Festival de Ópera do Amazonas é realizado anualmente."
+    },
+    en: {
+      ano: "1997",
+      texto:
+        "In 1997, the Amazonas Philharmonic Orchestra was created by conductor Júlio Medaglia, along with the Amazonas Dance Company and Choir. Initially, these artistic bodies were composed mostly of artists from Eastern Europe, and today they also include regional members. Since then, the Amazonas Opera Festival has been held annually."
+    }
+  },
+  {
+    id: 37,
+    video: false,
+    pt: {
+      ano: "Século XXI",
+      texto:
+        "A Suframa continua a desempenhar um papel crucial no desenvolvimento regional, implementando políticas estratégicas que transcendem o modelo de incentivos fiscais e buscam promover o desenvolvimento de recursos humanos, a pesquisa científica e a inovação tecnológica. Em 2002, foi inaugurado o Centro de Biotecnologia da Amazônia (CBA) e, em 2003, o Centro de Ciência, Tecnologia e Inovação do Polo Industrial de Manaus (CT-PIM)."
+    },
+    en: {
+      ano: "Século XXI",
+      texto:
+        "Suframa continues to play a crucial role in regional development by implementing strategic policies that transcend the model of tax incentives and seek to promote the development of human resources, scientific research, and technological innovation. In 2002, the Amazon Biotechnology Center (CBA) was inaugurated, and in 2003, the Center for Science, Technology and Innovation of the Manaus Industrial Pole (CT-PIM)."
+    }
+  },
+  {
+    id: 38,
+    video: false,
+    pt: {
+      ano: "Século XXI",
+      texto:
+        "Um dos grandes desafios para o desenvolvimento regional é conciliar o crescimento econômico e a preservação ambiental, a fim de aproveitar os recursos da maior biodiversidade do planeta de forma sustentável. Algumas linhas de pesquisa em biotecnologia e agricultura desenvolvidas na Amazônia buscam combinar o conhecimento ancestral dos povos originários com o conhecimento científico."
+    },
+    en: {
+      ano: "Século XXI",
+      texto:
+        "One of the great challenges for regional development is reconciling economic growth and environmental preservation, in order to take advantage of the resources of the planet's greatest biodiversity in a sustainable way. Some lines of research in biotechnology and agriculture developed in the Amazon seek to combine the ancient knowledge of the original peoples and scientific knowledge."
     }
   }
 ])
