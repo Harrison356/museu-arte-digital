@@ -42,7 +42,8 @@ const exposicoes = [
   {
     titulo: "Arqueologia",
     imagem: "https://casadedoda.com/wp-content/uploads/2019/09/museu-da-cidade-manaus-11-1024x577.jpg",
-    descricao: "Vestígios históricos e descobertas."
+    descricao: "Vestígios históricos e descobertas.",
+    rota: "/arqueologia"
   }
 ]
 </script>

@@ -6,23 +6,23 @@ const idioma = ref('pt')
 
 const textos = {
   pt: {
-    titulo: "AFLUENTES DOS RIOS",
-    p1: "A história da cidade de Manaus está diretamente relacionada à singularidade de sua localização geográfica que, desde tempos pré-coloniais, lhe confere uma condição privilegiada no processo de ocupação da região.",
-    p2: "Ela é a única cidade no mundo circunscrita em meio à maior biodiversidade do planeta e na confluênciade dois gigantescos rios - o Negro e o Solimões. Esse encontro das águas estabelece os fluxos de ocupação que permitiram a fundação da capital do estado do Amazonas. Uma linha do tempo é como um rio: flui ininterruptamente, carregando distintas camadas de tempo, as quais ora se sobrepõem, ora se distinguem e voltam a se reencontrar, como em um circuito fechado de águas correntes.",
-    p3: "A proposta central para este espaço é proporcionar uma experiência ao mesmo tempo sensorial e cognitiva do fluxo temporal, elaborando, sucessivamente, a história da cidade, desde os primeiros indícios de ocupação humana da região (há pelo menos 9.000 anos) até os dias atuais. Por meio de um sistema de projeções interativas sobre a água, um grande fluxo de informações, distribuídas em tópicos e em diferentes linguagens, é acionado pelo toque das mãos dos visitantes. Imagens, vídeos e textos confluem nas águas e revelam a história de Manaus.",
+    titulo: "ARQUEOLOGIA",
+    p1: "Pesquisas arqueológicas recentes na Amazônia têm apontado para novas possibilidades de compreensão da história antiga dos povos indígenas que habitavam a região há pelo menos 11.000 anos. Nos arredores de Manaus, próximo ao encontro das águas, vestígios subterrâneos atestam milênios de ocupação desses locais por grandes populações durante distintos e longos períodos. Práticas sustentáveis milenares, como a domesticação de plantas e o manejo dos recursos naturais, evidenciam a enorme contribuição dos povos originários para a promoção da biodiversidade da floresta amazônica.",
+    p2: "sala, no Paço da Liberdade, e na praça diante da entrada deste edifício (Praça D. Pedro II), encontra-se um extenso sítio arqueológico. Durante escavações realizadas em 2003, nele foram encontradas urnas funerárias - como a que se vê sob este piso - datadas entre os séculos VII a XII d.C (cultura Paredão).",
+    p3: "Ao interagir com o aplicativo de realidade virtual desenvolvido para este espaço, visitante fará uma imersão em sítios arqueológicos da região de Manaus, guiado pelo arqueólogo Eduardo Góes Neves. Explorando artefatos cerâmicos, objetos líticos, esqueletos humanos, reconstituídos em 3D, irá se deparar com as revelações mais surpreendentes que emergem dos subsolos locais.",
     videos: "VÍDEOS",
     videosDesc: "Experiência audiovisual interativa",
-    linha: "LINHA DO TEMPO",
+    linha: "ARQUEOLOGIA",
     linhaDesc: "A evolução histórica de Manaus"
   },
   en: {
-    titulo: "TRIBUTARY RIVERS",
-    p1: "The history of the city of Manaus is directly related to the uniqueness of its geographical location, which, since pre-colonial times, has given it a privileged condition in the process of occupation of the region.",
-    p2: "It is the only city in the world circumscribed amidst the greatest biodiversity on the planet and at the confluence of two gigantic rivers - the Negro and the Solimões. This meeting of waters establishes the flows of occupation that allowed the founding of the capital of the state of Amazonas. A timeline is like a river: it flows uninterruptedly, carrying distinct layers of time, which sometimes overlap, sometimes become distinct and meet again, as in a closed circuit of flowing waters.",
-    p3: "The central proposal for this space is to provide a sensory and cognitive experience of the temporal flow, elaborating, successively, the history of the city, from the first signs of human occupation of the region (at least 9,000 years ago) to the present day. Through an interactive projection system on the water, a large flow of information, distributed across topics and in different languages, is activated by the touch of visitors' hands. Images, videos, and texts converge on the water and reveal the history of Manaus.",
+    titulo: "ARCHEOLOGY",
+    p1: " Recent archaeological research in the Amazon has pointed to new possibilities for understanding the ancient history of the indigenous peoples who inhabited the region at least 11,000 years ago. In the surroundings of Manaus, near the meeting of the waters, underground remains attest to millennia of occupation of these places by large populations during distinct and long periods. Millennial sustainable practices, such as the domestication of plants and the management of natural resources, demonstrate the enormous contribution of the original peoples to the promotion of the biodiversity of the Amazon rainforest.",
+    p2: " Under this room, in the Paço da Liberdade, and in the square in front of the entrance to this building (Praça D. Pedro II), lies an extensive archaeological site. During excavations carried out in 2003, funerary urns were found there - such as the one seen under this floor - dating from between the 7th and 12th centuries AD (Paredão culture).",
+    p3: "By interacting with the virtual reality application developed for this space, the visitor will be immersed in archaeological sites in the Manaus region, guided by archaeologist Eduardo Góes Neves. Exploring ceramic artifacts, lithic objects, and human skeletons, reconstructed in 3D, they will encounter the most surprising revelations that emerge from the local subsoil.",
     videos: "VIDEOS",
     videosDesc: "Interactive audiovisual experience",
-    linha: "TIMELINE",
+    linha: "ARCHEOLOGY",
     linhaDesc: "The historical evolution of Manaus"
   }
 }
@@ -80,21 +80,14 @@ onMounted(() => {
         <!-- IMAGENS -->
         <div class="imagens fade-in">
 
-  <router-link to="/videos" class="card">
-    <img src="/src/assets/mapa-antigo.png" alt="">
+  <router-link to="/" class="card">
+    <img src="/src/assets/arqueologia.png" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].videos }}</h3>
       <span>{{ textos[idioma].videosDesc }}</span>
     </div>
   </router-link>
 
-  <router-link to="/linhatempo" class="card">
-    <img src="/src/assets/linha-tempo.png" alt="">
-    <div class="overlay">
-      <h3>{{ textos[idioma].linha }}</h3>
-      <span>{{ textos[idioma].linhaDesc }}</span>
-    </div>
-  </router-link>
 
 </div>
 
@@ -108,7 +101,7 @@ onMounted(() => {
 
 <style scoped>
 .afluente {
-  background: linear-gradient(to bottom, #d9b36a, #e8c98b);
+  background: linear-gradient(to bottom, #d3b0c8, #f8c7f6);
   padding: 120px 0;
 }
 

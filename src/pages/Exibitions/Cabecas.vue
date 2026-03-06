@@ -7,7 +7,6 @@ const idioma = ref('pt')
 const textos = {
   pt: {
     titulo: "CASAS - CABEÇAS",
-    subtitulo: "A história que flui como um rio",
     p1: "A história da cidade de Manaus está diretamente relacionada à singularidade de sua localização geográfica que, desde tempos pré-coloniais, lhe confere uma condição privilegiada no processo de ocupação da região.",
     p2: "Ela é a única cidade no mundo circunscrita em meio à maior biodiversidade do planeta e na confluência de dois gigantescos rios – o Negro e o Solimões.",
     p3: "A proposta deste espaço é proporcionar uma experiência sensorial e cognitiva do fluxo temporal, revelando a história da cidade desde os primeiros indícios de ocupação humana até os dias atuais.",
@@ -18,7 +17,6 @@ const textos = {
   },
   en: {
     titulo: "TRIBUTARY RIVERS",
-    subtitulo: "History that flows like a river",
     p1: "The history of the city of Manaus is directly related to the uniqueness of its geographical location which, since pre-colonial times, has given it a privileged condition in the occupation process of the region.",
     p2: "It is the only city in the world surrounded by the greatest biodiversity on the planet and located at the confluence of two gigantic rivers – Negro and Solimões.",
     p3: "The purpose of this space is to provide a sensory and cognitive experience of temporal flow, revealing the history of the city from the first signs of human occupation to the present day.",
