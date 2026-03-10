@@ -12,6 +12,8 @@ const NotFound = () => import('../pages/NotFound.vue')
 const Afluente = () => import('../pages/Exibitions/Afluente.vue')
 const Cabecas = () => import('../pages/Exibitions/Cabecas.vue')
 const Arqueologia = () => import('../pages/Exibitions/Arqueologia.vue')
+const Rios = () => import('../pages/Exibitions/Rios.vue')
+const Aneis = () => import('../pages/Exibitions/Aneis.vue')
 const Videos = () => import('../pages/Exibitions/Afluente/Videos.vue')
 const LinhaTempo = () => import('../pages/Exibitions/Afluente/linhatempo.vue')
 
@@ -78,6 +80,16 @@ const routes = [
   path: '/arqueologia',
   name: 'Arqueologia',
   component: Arqueologia
+},
+  {
+  path: '/rios',
+  name: 'Rios',
+  component: Rios
+},
+  {
+  path: '/aneis',
+  name: 'Aneis',
+  component: Aneis
 },
   {
     path: '/:pathMatch(.*)*',

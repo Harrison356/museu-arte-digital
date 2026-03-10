@@ -27,7 +27,8 @@ const exposicoes = [
   {
     titulo: "Anéis de Crescimento",
     imagem: "https://www.amazonasemais.com.br/wp-content/uploads/2019/04/museu-da-cidade-5.jpg",
-    descricao: "Evolução urbana de Manaus."
+    descricao: "Evolução urbana de Manaus.",
+    rota: "/aneis"
   },
   {
     titulo: "Mercado",
@@ -37,7 +38,8 @@ const exposicoes = [
   {
     titulo: "Rios Voadores",
     imagem: "https://casadedoda.com/wp-content/uploads/2019/09/museu-da-cidade-manaus-10-1024x577.jpg",
-    descricao: "Fenômenos naturais da Amazônia."
+    descricao: "Fenômenos naturais da Amazônia.",
+    rota: "/rios"
   },
   {
     titulo: "Arqueologia",
