@@ -7,22 +7,22 @@ const idioma = ref('pt')
 const textos = {
   pt: {
     titulo: "CASAS - CABEÇAS",
-    p1: "A história da cidade de Manaus está diretamente relacionada à singularidade de sua localização geográfica que, desde tempos pré-coloniais, lhe confere uma condição privilegiada no processo de ocupação da região.",
-    p2: "Ela é a única cidade no mundo circunscrita em meio à maior biodiversidade do planeta e na confluência de dois gigantescos rios – o Negro e o Solimões.",
-    p3: "A proposta deste espaço é proporcionar uma experiência sensorial e cognitiva do fluxo temporal, revelando a história da cidade desde os primeiros indícios de ocupação humana até os dias atuais.",
-    videos: "VÍDEOS",
+    p1: "A estrutura extremamente diversificada da sociedade manauara é um dos traços peculiares e enriquecedores da cidade. Manaus é formada tanto por povos originários da Amazônia quanto por imigrantes de todas as partes do mundo e do Brasil, que se dirigiram para a região em distintos processos migratórios. Um dos mais significativos entre eles ocorreu durante o período da borracha, a partir dos anos 1870, quando chega à cidade um grande número de trabalhadores - sobretudo do Nordeste do país - e investidores estrangeiros, atraídos pela promissora economia gomífera.",
+    p2: "Portugueses, ingleses, franceses, alemães, italianos, búlgaros, russos, japoneses, libaneses, judeus sefarditas, brasileiros de todos os cantos e diversos povos indígenas amazônicos contribuíram para formar o grande caldeirão multicultural que Manaus representa hoje. No espaço Casas- Cabeças, o público é convidado a interagir com um aplicativo constituído por ambientes internos de casas de moradores de Manaus. Esses ambientes e seus detalhes revelam alguns dos tantos traços culturais de seus habitantes. ",
+    p3: " Em Banho de Origens, depoimentos de oito moradores da cidade, de distintas origens, se misturam nas águas do Rio Negro. Eles refletem sobre suas raízes, suas experiências pessoais com a cidade e sobre o grande rio que os rodeia.",
+    videos: "CASAS - CABEÇAS",
     videosDesc: "Experiência audiovisual interativa",
-    linha: "LINHA DO TEMPO",
+    linha: "ARQUITETURA",
     linhaDesc: "A evolução histórica de Manaus"
   },
   en: {
-    titulo: "TRIBUTARY RIVERS",
-    p1: "The history of the city of Manaus is directly related to the uniqueness of its geographical location which, since pre-colonial times, has given it a privileged condition in the occupation process of the region.",
-    p2: "It is the only city in the world surrounded by the greatest biodiversity on the planet and located at the confluence of two gigantic rivers – Negro and Solimões.",
-    p3: "The purpose of this space is to provide a sensory and cognitive experience of temporal flow, revealing the history of the city from the first signs of human occupation to the present day.",
-    videos: "VIDEOS",
+    titulo: "HOUSES - HEADS",
+    p1: "The extremely diverse structure of Manaus society is one of the city's peculiar and enriching traits. Manaus is formed by both peoples originating from the Amazon and by immigrants from all parts of the world and Brazil, who went to the region in different migratory processes. One of the most significant among them occurred during the rubber boom, starting in the 1870s, when a large number of workers arrived in the city - especially from the Northeast of the country - and foreign investors, attracted by the promising rubber economy.",
+    p2: "Portuguese, English, French, Germans, Italians, Bulgarians, Russians, Japanese, Lebanese, Sephardic Jews, Brazilians from all corners and various Amazonian indigenous peoples contributed to forming the great multicultural melting pot that Manaus represents today. In the Casas-Cabeças space, the public is invited to interact with an application consisting of interior environments of houses of Manaus residents. These environments and their details reveal some of the many cultural traits of their inhabitants.",
+    p3: "In A Bath of Origins, testimonies from eight city residents, of diverse origins, mingle in the waters of the Rio Negro. They reflect on their roots, their personal experiences with the city, and on the great river that surrounds them.",
+    videos: "HOUSES - HEADS",
     videosDesc: "Interactive audiovisual experience",
-    linha: "TIMELINE",
+    linha: "ARCHITECTURE",
     linhaDesc: "The historical evolution of Manaus"
   }
 }
@@ -80,7 +80,7 @@ onMounted(() => {
         <!-- IMAGENS -->
         <div class="imagens fade-in">
 
-  <router-link to="/casas-cabecas" class="card">
+  <router-link to="/galeria" class="card">
     <img src="/src/assets/casas-cabecas.png" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].videos }}</h3>
@@ -109,7 +109,7 @@ onMounted(() => {
 
 <style scoped>
 .cabecas {
-  background: linear-gradient(to bottom, #39b2c7, #64f0e9);
+  background: linear-gradient(to bottom, #247d8d, #64f0e9);
   padding: 120px 0;
 }
 

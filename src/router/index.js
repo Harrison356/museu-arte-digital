@@ -15,6 +15,8 @@ const Arqueologia = () => import('../pages/Exibitions/Arqueologia.vue')
 const Rios = () => import('../pages/Exibitions/Rios.vue')
 const Aneis = () => import('../pages/Exibitions/Aneis.vue')
 const Videos = () => import('../pages/Exibitions/Afluente/Videos.vue')
+const Galeria = () => import('../pages/Exibitions/Casas/Galeria.vue')
+const DetalheGaleria = () => import('../pages/Exibitions/Casas/DetalheGaleria.vue')
 const LinhaTempo = () => import('../pages/Exibitions/Afluente/linhatempo.vue')
 
 
@@ -67,16 +69,6 @@ const routes = [
   component: Cabecas
 },
   {
-  path: '/videos',
-  name: 'Videos',
-  component: Videos
-},
-  {
-  path: '/linhatempo',
-  name: 'LinhaTempo',
-  component: LinhaTempo
-},
-  {
   path: '/arqueologia',
   name: 'Arqueologia',
   component: Arqueologia
@@ -90,6 +82,26 @@ const routes = [
   path: '/aneis',
   name: 'Aneis',
   component: Aneis
+},
+  {
+  path: '/videos',
+  name: 'Videos',
+  component: Videos
+},
+  {
+  path: '/galeria',
+  name: 'Galeria',
+  component: Galeria
+},
+  {
+  path: '/galeria/:id',
+  name: 'DetalheGaleria',
+  component: DetalheGaleria
+},
+  {
+  path: '/linhatempo',
+  name: 'LinhaTempo',
+  component: LinhaTempo
 },
   {
     path: '/:pathMatch(.*)*',
