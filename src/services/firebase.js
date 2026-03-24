@@ -1,10 +1,9 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+// Importações
+import { initializeApp } from "firebase/app"
 import { getFirestore } from "firebase/firestore"
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth"
 
-// Your web app's Firebase configuration
+// Config do Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyDnn1MuwgNPh7CuKXaPFvGx25zmS87BJP0",
   authDomain: "museu-a6610.firebaseapp.com",
@@ -12,10 +11,14 @@ const firebaseConfig = {
   storageBucket: "museu-a6610.firebasestorage.app",
   messagingSenderId: "490328975518",
   appId: "1:490328975518:web:078649b97602a0700b738f"
-};
+}
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// 🔥 Inicializa o app
+const app = initializeApp(firebaseConfig)
+
+// 🔥 Inicializa serviços
 const db = getFirestore(app)
+const auth = getAuth(app)
 
-export { db }
+// 🔥 Exporta TUDO
+export { db, auth }
