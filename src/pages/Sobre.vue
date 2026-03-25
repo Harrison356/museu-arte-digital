@@ -2,13 +2,13 @@
   <section class="sobre">
     <div class="container">
       <h1>Paço da Liberdade – Museu da Cidade de Manaus</h1>
-
+      <center>
       <img 
         src="https://www.manaus.am.gov.br/wp-content/uploads/2023/01/Museu-da-Cidade-de-Manaus-reabre-com-exposicao-artistica-e-visitas-monitoradas.jpg" 
         alt="Paço da Liberdade – Museu da Cidade de Manaus"
         class="imagem-museu"
       />
-
+      </center>
       <div class="conteudo">
         <h2>Sobre a instituição</h2>
 

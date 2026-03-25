@@ -1,6 +1,7 @@
 <template>
   <section class="agendamento">
-    <h1>Agendar Visita Escolar</h1>
+    
+    <h1>Agendar Visita</h1>
 
     <form @submit.prevent="enviarFormulario">
 
@@ -132,10 +133,12 @@ async function enviarFormulario() {
   max-width: 600px;
   margin: auto;
   padding: 2rem;
+
 }
 
 h1 {
   text-align: center;
+  margin-top: 70px;
   margin-bottom: 20px;
 }
 
@@ -143,6 +146,8 @@ form {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  border: 2px solid #333;
+  border: #1e3a5f;
 }
 
 input, select, textarea {
