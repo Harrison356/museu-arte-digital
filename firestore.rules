@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /agendamentos/{docId} {
+      // 👀 Qualquer pessoa pode criar (formulário público)
+      allow create: if true;
+
+      // 👁️ Só usuário logado pode ler
+      allow read: if request.auth != null;
+
+      // ✏️ Só usuário logado pode editar/deletar
+      allow update, delete: if request.auth != null;
+    }
+
+  }
+}

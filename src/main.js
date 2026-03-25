@@ -5,6 +5,10 @@ import router from './router'
 // 🔥 IMPORTANTE: inicializa Firebase antes de tudo
 import './services/firebase'
 
+// ✅ ESTILOS GLOBAIS (responsividade)
+import './styles/global.css'
+import './styles/responsive.css'
+
 createApp(App)
   .use(router)
   .mount('#app')

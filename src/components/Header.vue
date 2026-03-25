@@ -1,66 +1,101 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const scrolled = ref(false)
 
+const handleScroll = () => {
+  scrolled.value = window.scrollY > 60
+}
+
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    scrolled.value = window.scrollY > 60
-  })
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 
 <template>
   <header :class="{ active: scrolled }">
+
+    <!-- LOGO -->
     <img src="/logo-museu.jpeg" class="logo" />
-    <nav>
+
+    <!-- MENU -->
+    <nav class="nav">
       <RouterLink to="/">Início</RouterLink>
       <RouterLink to="/exhibitions">Exposições</RouterLink>
-      <RouterLink to="/collections">Coleções</RouterLink>
-      <RouterLink to="/contato">Contato</RouterLink>
-      <RouterLink to="/admin" class="admin-btn">Admin</RouterLink>
+      
     </nav>
+
   </header>
 </template>
 
 <style scoped>
+
+/* HEADER */
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 20px 60px;
+  height: 70px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.4s ease;
-  z-index: 999;
-}
-
-header.active {
   background: white;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-  padding: 15px 60px;
+  z-index: 999;
+  border-bottom: 1px solid #eee;
 }
 
+/* SCROLL */
+header.active {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* LOGO */
 .logo {
-  height: 55px;
+  height: 45px;
 }
 
-nav a {
-  margin-left: 30px;
+/* NAV DESKTOP */
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
   text-decoration: none;
   color: #111;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #0b3d5c;
+/* 🔥 MOBILE CORRETO */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 5px;
+  }
+
+  .nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
 }
 
-.admin-btn {
-  background: #0b3d5c;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 20px;
-}
 </style>

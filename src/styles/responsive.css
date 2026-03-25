@@ -1,0 +1,27 @@
+/* 📱 Mobile first (padrão) */
+:root {
+  --padding-global: 16px;
+  --max-width: 100%;
+  --font-title: 22px;
+  --font-text: 14px;
+}
+
+/* 📲 Tablet */
+@media (min-width: 768px) {
+  :root {
+    --padding-global: 24px;
+    --max-width: 720px;
+    --font-title: 28px;
+    --font-text: 16px;
+  }
+}
+
+/* 💻 Desktop */
+@media (min-width: 1024px) {
+  :root {
+    --padding-global: 40px;
+    --max-width: 1100px;
+    --font-title: 32px;
+    --font-text: 18px;
+  }
+}

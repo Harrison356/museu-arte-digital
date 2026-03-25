@@ -1,0 +1,149 @@
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  overflow-x: hidden; /* evita scroll lateral */
+}
+
+/* VARIÁVEIS RESPONSIVAS */
+:root {
+  --padding-global: 16px;
+  --max-width: 100%;
+  --font-title: 22px;
+  --font-text: 14px;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  :root {
+    --padding-global: 24px;
+    --max-width: 720px;
+    --font-title: 28px;
+    --font-text: 16px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  :root {
+    --padding-global: 40px;
+    --max-width: 1100px;
+    --font-title: 32px;
+    --font-text: 18px;
+  }
+}
+
+/* CONTAINER GLOBAL */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-global);
+}
+
+/* TIPOGRAFIA */
+h1 {
+  font-size: var(--font-title);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: calc(var(--font-title) - 4px);
+}
+
+p {
+  font-size: var(--font-text);
+  line-height: 1.5;
+  color: #444;
+}
+
+/* IMAGENS */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* GRID BASE */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* GRID RESPONSIVO */
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* CARDS */
+.card {
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* CONTEÚDO DO CARD */
+.card-content {
+  padding: 16px;
+}
+
+
+
+/* HEADER BASE (APENAS ESTRUTURA, SEM POSITION FIXED) */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+}

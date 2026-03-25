@@ -8,7 +8,6 @@ import { auth } from '../services/firebase'
 const Home = () => import('../pages/Home.vue')
 const Agendamento = () => import('../pages/Agendamento.vue')
 const Sobre = () => import('../pages/Sobre.vue')
-const Contato = () => import('../pages/Contato.vue')
 const Exhibitions = () => import('../pages/Exhibitions.vue')
 const Admin = () => import('../pages/AdminAgendamento.vue')
 const Login = () => import('../pages/Login.vue')
@@ -31,7 +30,6 @@ const routes = [
   { path: '/', component: Home, meta: { title: 'Museu da Cidade de Manaus' } },
   { path: '/agendamento', component: Agendamento, meta: { title: 'Agendamento | Museu de Manaus' } },
   { path: '/sobre', component: Sobre, meta: { title: 'Sobre | Museu de Manaus' } },
-  { path: '/contato', component: Contato, meta: { title: 'Contato | Museu de Manaus' } },
   { path: '/exhibitions', component: Exhibitions, meta: { title: 'Exposições | Museu de Manaus' } },
 
   // 🔐 Login
