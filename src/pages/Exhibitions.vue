@@ -23,7 +23,8 @@ const exposicoes = [
   {
     titulo: "Sala dos Prefeitos",
     imagem: "https://www.amazonasemais.com.br/wp-content/uploads/2019/04/museu-cidade-7.jpg",
-    descricao: "História política da cidade."
+    descricao: "História política da cidade.",
+    rota: "/Prefeitos"
   },
   {
     titulo: "Anéis de Crescimento",

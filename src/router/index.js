@@ -21,12 +21,14 @@ const Arqueologia = () => import('../pages/Exibitions/Arqueologia.vue')
 const Rios = () => import('../pages/Exibitions/Rios.vue')
 const Aneis = () => import('../pages/Exibitions/Aneis.vue')
 const Banho = () => import('../pages/Exibitions/Banho.vue')
+const Prefeitos = () => import('../pages/Exibitions/Prefeitos.vue')
 
 // Subpáginas
 const Videos = () => import('../pages/Exibitions/Afluente/Videos.vue')
 const Galeria = () => import('../pages/Exibitions/Casas/Galeria.vue')
 const DetalheGaleria = () => import('../pages/Exibitions/Casas/DetalheGaleria.vue')
 const LinhaTempo = () => import('../pages/Exibitions/Afluente/linhatempo.vue')
+const PrefeitosDetalhes = () => import('../pages/Exibitions/Prefeitos/PrefeitosDetalhes.vue')
 
 const routes = [
   { path: '/', component: Home, meta: { title: 'Museu da Cidade de Manaus' } },
@@ -51,12 +53,14 @@ const routes = [
   { path: '/rios', component: Rios },
   { path: '/aneis', component: Aneis },
   { path: '/banho', component: Banho },
+  { path: '/prefeitos', component: Prefeitos },
 
   // Subpáginas
   { path: '/videos', component: Videos },
   { path: '/galeria', component: Galeria },
   { path: '/galeria/:id', component: DetalheGaleria },
   { path: '/linhatempo', component: LinhaTempo },
+  { path: '/prefeitos/:id', component: PrefeitosDetalhes },
 
   // 404
   { path: '/:pathMatch(.*)*', component: NotFound }
