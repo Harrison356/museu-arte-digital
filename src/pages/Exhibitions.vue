@@ -87,7 +87,7 @@ const exposicoes = [
 <style scoped>
 .expo {
   padding: 140px 10%;
-  background: #f4f4f4;
+  background-image: linear-gradient(#ffffff, #bbf7fa);
 }
 
 h1 {

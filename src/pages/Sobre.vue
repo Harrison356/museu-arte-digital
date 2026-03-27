@@ -68,7 +68,7 @@
 <style scoped>
 .sobre {
   padding: 40px 20px;
-  background-color: #f4f4f4;
+  background-image: linear-gradient(#ffffff, #bbf7fa);
   min-height: 100vh;
 }
 

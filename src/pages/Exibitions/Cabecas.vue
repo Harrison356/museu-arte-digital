@@ -266,4 +266,92 @@ onMounted(() => {
     grid-template-columns: 1fr;
   }
 }
+/* ================= MOBILE AJUSTADO ================= */
+@media (max-width: 900px) {
+
+  .cabecas {
+    padding: 80px 0; /* reduz espaço gigante */
+  }
+
+  .titulo {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+  }
+
+  .titulo h1 {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  .linha {
+    width: 50px;
+  }
+
+  /* BOTÃO IDIOMA CORRIGIDO */
+  .idioma {
+    position: static; /* remove absolute bugado */
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  /* GRID VIRA COLUNA */
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* TEXTO */
+  .texto h2 {
+    font-size: 20px;
+  }
+
+  .texto p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* IMAGENS */
+  .imagens {
+    gap: 25px;
+  }
+
+  .card img {
+    height: 200px; /* menor no mobile */
+  }
+
+  .overlay {
+    padding: 18px;
+  }
+
+  .overlay h3 {
+    font-size: 16px;
+  }
+
+  .overlay span {
+    font-size: 13px;
+  }
+}
+
+/* ================= MOBILE PEQUENO ================= */
+@media (max-width: 480px) {
+
+  .afluente {
+    padding: 60px 0;
+  }
+
+  .titulo h1 {
+    font-size: 22px;
+  }
+
+  .texto p {
+    font-size: 14px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+}
 </style>

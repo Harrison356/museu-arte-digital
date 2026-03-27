@@ -1,4 +1,5 @@
 <template>
+  
   <section class="agendamento">
     
     <h1>Agendar Visita</h1>
@@ -41,6 +42,7 @@
       {{ mensagem }}
     </p>
   </section>
+
 </template>
 
 <script setup>
@@ -129,10 +131,16 @@ async function enviarFormulario() {
 </script>
 
 <style scoped>
+
+
 .agendamento {
+  
   max-width: 600px;
   margin: auto;
   padding: 2rem;
+  
+
+  
 
 }
 
@@ -146,8 +154,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 2px solid #333;
-  border: #1e3a5f;
+ 
 }
 
 input, select, textarea {
