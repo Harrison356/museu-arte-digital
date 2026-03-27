@@ -17,7 +17,8 @@ const exposicoes = [
   {
     titulo: "Banho de Origens",
     imagem: "https://www.amazonasemais.com.br/wp-content/uploads/2019/04/museu-cidade-8.jpg",
-    descricao: "Tradições vivas."
+    descricao: "Tradições vivas.",
+    rota: "/banho"
   },
   {
     titulo: "Sala dos Prefeitos",

@@ -4,6 +4,7 @@ import { onAuthStateChanged } from "firebase/auth"
 // 🔥 IMPORTANTE: usa o auth do firebase.js
 import { auth } from '../services/firebase'
 
+
 // Lazy Loading
 const Home = () => import('../pages/Home.vue')
 const Agendamento = () => import('../pages/Agendamento.vue')
@@ -19,6 +20,7 @@ const Cabecas = () => import('../pages/Exibitions/Cabecas.vue')
 const Arqueologia = () => import('../pages/Exibitions/Arqueologia.vue')
 const Rios = () => import('../pages/Exibitions/Rios.vue')
 const Aneis = () => import('../pages/Exibitions/Aneis.vue')
+const Banho = () => import('../pages/Exibitions/Banho.vue')
 
 // Subpáginas
 const Videos = () => import('../pages/Exibitions/Afluente/Videos.vue')
@@ -48,6 +50,7 @@ const routes = [
   { path: '/arqueologia', component: Arqueologia },
   { path: '/rios', component: Rios },
   { path: '/aneis', component: Aneis },
+  { path: '/banho', component: Banho },
 
   // Subpáginas
   { path: '/videos', component: Videos },
