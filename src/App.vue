@@ -1,6 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import Header from './components/Header.vue'
+import ChatBot from './components/ChatBot.vue'
 </script>
 
 <template>
@@ -15,6 +16,9 @@ import Header from './components/Header.vue'
         <component :is="Component" />
       </transition>
     </RouterView>
+
+    <!-- CHATBOT FLUTUANTE -->
+    <ChatBot />
 
   </div>
 </template>

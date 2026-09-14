@@ -6,11 +6,6 @@
       <!-- HEADER -->
       <header class="header">
         <h1>{{ textos[idioma].titulo }}</h1>
-
-        <div class="lang">
-          <button :class="{ active: idioma === 'pt' }" @click="idioma = 'pt'">PT</button>
-          <button :class="{ active: idioma === 'en' }" @click="idioma = 'en'">EN</button>
-        </div>
       </header>
 
       <!-- HERO / CARROSSEL -->
@@ -41,8 +36,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-
-const idioma = ref('pt')
+import { idioma } from '../composables/useIdioma'
 
 const textos = {
   pt: {
@@ -149,31 +143,6 @@ const eventos = [
 .header h1 {
   font-size: 38px;
   color: #111;
-}
-
-/* IDIOMA */
-
-.lang {
-  display: flex;
-  gap: 8px;
-}
-
-.lang button {
-  padding: 8px 14px;
-  border: none;
-  cursor: pointer;
-  background: #eee;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.lang button:hover {
-  background: #dcdcdc;
-}
-
-.lang .active {
-  background: #000;
-  color: #fff;
 }
 
 /* HERO / CARROSSEL */

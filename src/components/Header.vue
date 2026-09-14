@@ -1,7 +1,23 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { idioma } from '../composables/useIdioma'
 
 const scrolled = ref(false)
+
+const textos = {
+  pt: {
+    inicio: 'Início',
+    exposicoes: 'Exposições',
+    agendamento: 'Agendamento',
+    sobre: 'Sobre'
+  },
+  en: {
+    inicio: 'Home',
+    exposicoes: 'Exhibitions',
+    agendamento: 'Booking',
+    sobre: 'About'
+  }
+}
 
 const handleScroll = () => {
   scrolled.value = window.scrollY > 60
@@ -23,13 +39,20 @@ onUnmounted(() => {
     <img src="/logo-museu.jpeg" class="logo" />
 
     <!-- MENU -->
-    <nav class="nav">
-      <RouterLink to="/">Início</RouterLink>
-      <RouterLink to="/exhibitions">Exposições</RouterLink>
-      <RouterLink to="/Agendamento">Agendamento</RouterLink>
-      <RouterLink to="/Sobre">Sobre</RouterLink>
-      
-    </nav>
+    <div class="menu">
+      <nav class="nav">
+        <RouterLink to="/">{{ textos[idioma].inicio }}</RouterLink>
+        <RouterLink to="/exhibitions">{{ textos[idioma].exposicoes }}</RouterLink>
+        <RouterLink to="/Agendamento">{{ textos[idioma].agendamento }}</RouterLink>
+        <RouterLink to="/Sobre">{{ textos[idioma].sobre }}</RouterLink>
+      </nav>
+
+      <!-- BOTÃO IDIOMA -->
+      <div class="idioma">
+        <button :class="{ ativo: idioma === 'pt' }" @click="idioma = 'pt'">PT</button>
+        <button :class="{ ativo: idioma === 'en' }" @click="idioma = 'en'">EN</button>
+      </div>
+    </div>
 
   </header>
 </template>
@@ -62,6 +85,13 @@ header.active {
   height: 45px;
 }
 
+/* MENU (NAV + IDIOMA) */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
 /* NAV DESKTOP */
 .nav {
   display: flex;
@@ -72,6 +102,33 @@ header.active {
   text-decoration: none;
   color: #111;
   font-weight: 500;
+}
+
+/* BOTÃO IDIOMA */
+.idioma {
+  display: flex;
+  gap: 8px;
+}
+
+.idioma button {
+  background: transparent;
+  border: 1px solid #537bff;
+  color: #537bff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.idioma button:hover {
+  background: #537bff;
+  color: white;
+}
+
+.idioma .ativo {
+  background: #537bff;
+  color: white;
 }
 
 /* 🔥 MOBILE CORRETO */
@@ -87,6 +144,12 @@ header.active {
     margin-bottom: 5px;
   }
 
+  .menu {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .nav {
     width: 100%;
     display: flex;
@@ -97,6 +160,10 @@ header.active {
 
   .nav a {
     font-size: 14px;
+  }
+
+  .idioma {
+    justify-content: center;
   }
 }
 

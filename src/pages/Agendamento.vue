@@ -1,86 +1,86 @@
 <template>
   <section class="agendamento">
 
-    <h1>Agendar Visita</h1>
+    <h1>{{ textos[idioma].titulo }}</h1>
 
     <form @submit.prevent="enviarFormulario">
 
-      <input 
-        v-model="form.instituicao" 
-        type="text" 
-        placeholder="Nome da Instituição" 
-        required 
+      <input
+        v-model="form.instituicao"
+        type="text"
+        :placeholder="textos[idioma].instituicao"
+        required
       />
 
-      <input 
-        v-model="form.cnpj" 
-        type="text" 
-        placeholder="CNPJ" 
-        required 
+      <input
+        v-model="form.cnpj"
+        type="text"
+        placeholder="CNPJ"
+        required
       />
 
-      <input 
-        v-model="form.responsavel" 
-        type="text" 
-        placeholder="Responsável" 
-        required 
+      <input
+        v-model="form.responsavel"
+        type="text"
+        :placeholder="textos[idioma].responsavel"
+        required
       />
 
-      <input 
-        v-model="form.telefone" 
-        type="tel" 
-        placeholder="Telefone" 
-        required 
+      <input
+        v-model="form.telefone"
+        type="tel"
+        :placeholder="textos[idioma].telefone"
+        required
       />
 
-      <input 
-        v-model="form.email" 
-        type="email" 
-        placeholder="Email" 
-        required 
+      <input
+        v-model="form.email"
+        type="email"
+        placeholder="Email"
+        required
       />
 
-      <input 
-        v-model="form.alunos" 
-        type="number" 
-        placeholder="Qtd. de Alunos" 
-        required 
+      <input
+        v-model="form.alunos"
+        type="number"
+        :placeholder="textos[idioma].alunos"
+        required
       />
 
-      <input 
-        v-model="form.professores" 
-        type="number" 
-        placeholder="Qtd. de Professores" 
-        required 
+      <input
+        v-model="form.professores"
+        type="number"
+        :placeholder="textos[idioma].professores"
+        required
       />
 
-      <input 
-        v-model="form.data" 
-        type="date" 
-        required 
+      <input
+        v-model="form.data"
+        type="date"
+        required
       />
 
       <select v-model="form.horario" required>
-        <option disabled value="">Selecione o horário</option>
+        <option disabled value="">{{ textos[idioma].selecioneHorario }}</option>
         <option value="08:00">08:00</option>
         <option value="10:00">10:00</option>
         <option value="14:00">14:00</option>
       </select>
 
       <select v-model="form.tipoVisita" required>
-        <option disabled value="">Tipo de visita</option>
-        <option value="Visita Guiada">Visita Guiada</option>
-        <option value="Visita Livre">Visita Livre</option>
-        <option value="Oficina Educativa">Oficina Educativa</option>
+        <option disabled value="">{{ textos[idioma].tipoVisita }}</option>
+        <option value="Visita Guiada">{{ textos[idioma].visitaGuiada }}</option>
+        <option value="Visita Livre">{{ textos[idioma].visitaLivre }}</option>
+        <option value="Oficina Educativa">{{ textos[idioma].oficinaEducativa }}</option>
       </select>
 
-      <textarea 
-        v-model="form.observacoes" 
-        placeholder="Observações">
+      <textarea
+        v-model="form.observacoes"
+        :placeholder="textos[idioma].observacoes">
       </textarea>
 
       <button type="submit" :disabled="loading">
-        {{ loading ? "Enviando..." : "Enviar Solicitação" }}
+        {{ loading ? textos[idioma].enviando : textos[idioma].enviarSolicitacao }}
       </button>
 
     </form>
@@ -91,12 +91,12 @@
 
     <!-- 🔥 LISTA DE AGENDAMENTOS -->
     <div class="lista-agendamentos">
-      <h2>Datas Já Solicitadas</h2>
+      <h2>{{ textos[idioma].datasJaSolicitadas }}</h2>
 
-      <div 
+      <div
         v-if="agendamentos.length === 0"
         class="vazio">
-        Nenhum agendamento encontrado.
+        {{ textos[idioma].nenhumAgendamento }}
       </div>
 
       <div 
@@ -105,20 +105,20 @@
         class="card-agendamento">
 
         <div>
-          <strong>📅 Data:</strong>
+          <strong>📅 {{ textos[idioma].data }}</strong>
           {{ item.data }}
         </div>
 
         <div>
-          <strong>⏰ Horário:</strong>
+          <strong>⏰ {{ textos[idioma].horario }}</strong>
           {{ item.horario }}
         </div>
 
 
         <div>
-          <strong>Status:</strong>
+          <strong>{{ textos[idioma].status }}</strong>
 
-          <span 
+          <span
             :class="[
               'status',
               item.status === 'confirmado'
@@ -126,7 +126,7 @@
                 : 'pendente'
             ]">
 
-            {{ item.status }}
+            {{ item.status === 'confirmado' ? textos[idioma].statusConfirmado : textos[idioma].statusPendente }}
 
           </span>
         </div>
@@ -151,6 +151,62 @@ import {
 
 import { db } from "../services/firebase"
 import emailjs from "@emailjs/browser"
+import { idioma } from "../composables/useIdioma"
+
+const textos = {
+  pt: {
+    titulo: "Agendar Visita",
+    instituicao: "Nome da Instituição",
+    responsavel: "Responsável",
+    telefone: "Telefone",
+    alunos: "Qtd. de Alunos",
+    professores: "Qtd. de Professores",
+    selecioneHorario: "Selecione o horário",
+    tipoVisita: "Tipo de visita",
+    visitaGuiada: "Visita Guiada",
+    visitaLivre: "Visita Livre",
+    oficinaEducativa: "Oficina Educativa",
+    observacoes: "Observações",
+    enviando: "Enviando...",
+    enviarSolicitacao: "Enviar Solicitação",
+    datasJaSolicitadas: "Datas Já Solicitadas",
+    nenhumAgendamento: "Nenhum agendamento encontrado.",
+    data: "Data:",
+    horario: "Horário:",
+    status: "Status:",
+    statusPendente: "Pendente",
+    statusConfirmado: "Confirmado",
+    conflito: "Data e horário já estão reservados.",
+    sucesso: "Solicitação enviada com sucesso!",
+    erro: "Erro ao enviar solicitação."
+  },
+  en: {
+    titulo: "Schedule a Visit",
+    instituicao: "Institution Name",
+    responsavel: "Responsible Person",
+    telefone: "Phone",
+    alunos: "Number of Students",
+    professores: "Number of Teachers",
+    selecioneHorario: "Select a time",
+    tipoVisita: "Visit type",
+    visitaGuiada: "Guided Visit",
+    visitaLivre: "Free Visit",
+    oficinaEducativa: "Educational Workshop",
+    observacoes: "Notes",
+    enviando: "Sending...",
+    enviarSolicitacao: "Submit Request",
+    datasJaSolicitadas: "Already Requested Dates",
+    nenhumAgendamento: "No appointments found.",
+    data: "Date:",
+    horario: "Time:",
+    status: "Status:",
+    statusPendente: "Pending",
+    statusConfirmado: "Confirmed",
+    conflito: "This date and time are already booked.",
+    sucesso: "Request submitted successfully!",
+    erro: "Error submitting request."
+  }
+}
 
 const mensagem = ref("")
 const loading = ref(false)
@@ -208,7 +264,7 @@ async function enviarFormulario() {
     const disponivel = await verificarDisponibilidade()
 
     if (!disponivel) {
-      mensagem.value = "Data e horário já estão reservados."
+      mensagem.value = textos[idioma.value].conflito
       loading.value = false
       return
     }
@@ -233,7 +289,7 @@ async function enviarFormulario() {
       "oN2rgcDHercgp6D7g"
     )
 
-    mensagem.value = "Solicitação enviada com sucesso!"
+    mensagem.value = textos[idioma.value].sucesso
 
     Object.keys(form).forEach(key => {
       form[key] = ""
@@ -245,7 +301,7 @@ async function enviarFormulario() {
   } catch (error) {
 
     console.error("Erro:", error)
-    mensagem.value = "Erro ao enviar solicitação."
+    mensagem.value = textos[idioma.value].erro
 
   }
 
