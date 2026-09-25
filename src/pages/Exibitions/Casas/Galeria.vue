@@ -1,7 +1,13 @@
 <script setup>
-import { ref } from "vue"
-
-const idioma = ref("pt")
+import { idioma } from '../../../composables/useIdioma'
+import img1 from '../../../assets/img1.png'
+import img2 from '../../../assets/img2.png'
+import img3 from '../../../assets/img3.png'
+import img4 from '../../../assets/img4.png'
+import img5 from '../../../assets/img5.png'
+import img6 from '../../../assets/img6.png'
+import img7 from '../../../assets/img7.png'
+import img8 from '../../../assets/img8.png'
 
 const textos = {
   pt: {
@@ -16,7 +22,7 @@ const fotos = [
 
 {
 id:1,
-img:"/src/assets/img1.png",
+img: img1,
 titulo:{
 pt:"Casa Cabeça",
 en:"House Head"
@@ -25,7 +31,7 @@ en:"House Head"
 
 {
 id:2,
-img:"/src/assets/img2.png",
+img: img2,
 titulo:{
 pt:"Objeto Religioso",
 en:"Religious Object"
@@ -34,7 +40,7 @@ en:"Religious Object"
 
 {
 id:3,
-img:"/src/assets/img3.png",
+img: img3,
 titulo:{
 pt:"Artesanato",
 en:"Handcraft"
@@ -43,7 +49,7 @@ en:"Handcraft"
 
 {
 id:4,
-img:"/src/assets/img4.png",
+img: img4,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -52,7 +58,7 @@ en:"Cultural Symbol"
 
 {
 id:5,
-img:"/src/assets/img5.png",
+img: img5,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -61,7 +67,7 @@ en:"Cultural Symbol"
 
 {
 id:6,
-img:"/src/assets/img6.png",
+img: img6,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -70,7 +76,7 @@ en:"Cultural Symbol"
 
 {
 id:7,
-img:"/src/assets/img7.png",
+img: img7,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -79,7 +85,7 @@ en:"Cultural Symbol"
 
 {
 id:8,
-img:"/src/assets/img8.png",
+img: img8,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -105,11 +111,6 @@ function abrir(foto){
 
 <span class="linha"></span>
 
-<div class="idioma">
-<button @click="idioma='pt'">PT</button>
-<button @click="idioma='en'">EN</button>
-</div>
-
 </h1>
 
 <div class="grid">
@@ -132,7 +133,7 @@ v-for="foto in fotos"
 <style scoped>
 
 .pagina{
-padding:40px;
+padding:50px 40px 40px;
 text-align:center;
 background: linear-gradient(to bottom, #247d8d, #64f0e9);
 }
@@ -176,25 +177,32 @@ border-radius:6px;
 transform:scale(1.05);
 }
 
-.idioma{
-position:absolute;
-right:0;
-display:flex;
-gap:10px;
+/* MOBILE */
+@media (max-width: 768px) {
+  .pagina {
+    padding: 30px 20px 30px;
+  }
+
+  .titulo {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .linha {
+    width: 60px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
-.idioma button{
-background:transparent;
-border:1px solid white;
-padding:6px 12px;
-color:white;
-cursor:pointer;
-transition:0.3s;
+@media (max-width: 420px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
-
-.idioma button:hover{
-background:white;
-color:#5e4a2e;
-}
-
 </style>

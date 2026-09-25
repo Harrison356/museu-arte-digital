@@ -14,23 +14,6 @@
 
       <div class="linha"></div>
 
-      <!-- Idioma -->
-      <div class="idioma">
-        <button 
-          :class="{ ativo: idioma === 'pt' }"
-          @click="idioma = 'pt'"
-        >
-          PT
-        </button>
-
-        <button 
-          :class="{ ativo: idioma === 'en' }"
-          @click="idioma = 'en'"
-        >
-          EN
-        </button>
-      </div>
-
     </div>
 
     <!-- GRID DE VIDEOS -->
@@ -68,8 +51,8 @@
 
 <script setup>
 import { ref } from 'vue'
+import { idioma } from '../../../composables/useIdioma'
 
-const idioma = ref('pt')
 const videoAtivo = ref(null)
 
 const textos = {
@@ -119,7 +102,7 @@ function fecharVideo() {
 <style scoped>
 
 .videos {
-  padding: 80px 10%;
+  padding: 40px 10%;
   background-color: #d6b676;
   min-height: 100vh;
 }
@@ -156,33 +139,6 @@ function fecharVideo() {
   width: 150px;
   height: 2px;
   background: white;
-}
-
-/* Idioma */
-.idioma {
-  position: absolute;
-  right: 0;
-  display: flex;
-  gap: 10px;
-}
-
-.idioma button {
-  background: transparent;
-  border: 1px solid white;
-  padding: 6px 12px;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.idioma button:hover {
-  background: white;
-  color: #5e4a2e;
-}
-
-.idioma .ativo {
-  background: white;
-  color: #5e4a2e;
 }
 
 /* GRID */
@@ -245,4 +201,42 @@ function fecharVideo() {
   cursor: pointer;
 }
 
+/* MOBILE */
+@media (max-width: 900px) {
+  .videos {
+    padding: 30px 6% 40px;
+  }
+
+  .titulo {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+
+  .titulo h1 {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  .titulo h2 {
+    font-size: 15px;
+  }
+
+  .linha {
+    width: 60px;
+  }
+
+  .grid-videos {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .modal-conteudo {
+    width: 92%;
+  }
+
+  .modal iframe {
+    height: 220px;
+  }
+}
 </style>

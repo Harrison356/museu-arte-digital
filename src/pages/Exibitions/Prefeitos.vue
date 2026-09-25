@@ -1,10 +1,9 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { idioma } from '../../composables/useIdioma'
 
 const router = useRouter()
-
-const idioma = ref('pt')
 
 const textos = {
   pt: {
@@ -85,12 +84,6 @@ function irParaPrefeito(id) {
       <h1>{{ textos[idioma].titulo }}</h1>
 
       <div class="linha"></div>
-
-      <!-- IDIOMA -->
-      <div class="idiomas-box">
-        <button @click="idioma = 'pt'" :class="{ ativo: idioma === 'pt' }">PT</button>
-        <button @click="idioma = 'en'" :class="{ ativo: idioma === 'en' }">EN</button>
-      </div>
     </div>
 
     <!-- LISTA -->
@@ -157,33 +150,6 @@ function irParaPrefeito(id) {
   background: white;
 }
 
-.idiomas-box {
-  position: absolute;
-  right: 0;
-  display: flex;
-  gap: 8px;
-}
-
-.idiomas-box button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 4px 10px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.idiomas-box button:hover {
-  background: white;
-  color: #d6c08d;
-}
-
-.idiomas-box .ativo {
-  background: white;
-  color: #d6c08d;
-}
-
 .lista {
   display: flex;
   justify-content: center;
@@ -206,11 +172,6 @@ function irParaPrefeito(id) {
   .header-titulo {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .idiomas-box {
-    position: static;
-    margin-top: 10px;
   }
 
   .linha {
@@ -251,18 +212,6 @@ function irParaPrefeito(id) {
 
   .linha {
     width: 50px;
-  }
-
-  /* BOTÕES PT EN */
-  .idiomas-box {
-    position: static; /* 🔥 remove bug de sobreposição */
-    margin-top: 10px;
-    justify-content: center;
-  }
-
-  .idiomas-box button {
-    font-size: 11px;
-    padding: 4px 8px;
   }
 
   /* LISTA */

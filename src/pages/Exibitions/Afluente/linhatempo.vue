@@ -4,18 +4,6 @@
     <!-- HEADER -->
     <div class="header">
       <h1>{{ textos[idioma].titulo }}</h1>
-
-      <div class="lang-switch">
-        <button
-          :class="{ active: idioma === 'pt' }"
-          @click="idioma = 'pt'"
-        >PT</button>
-
-        <button
-          :class="{ active: idioma === 'en' }"
-          @click="idioma = 'en'"
-        >EN</button>
-      </div>
     </div>
 
     <!-- CARROSSEL -->
@@ -63,8 +51,7 @@
 
 <script setup>
 import { ref, computed } from "vue"
-
-const idioma = ref("pt")
+import { idioma } from '../../../composables/useIdioma'
 
 const textos = {
   pt: {
@@ -667,31 +654,6 @@ function prev() {
   font-weight: 300;
 }
 
-/* Idioma */
-.lang-switch {
-  position: absolute;
-  top: 0;
-  right: 20px;
-}
-
-.lang-switch button {
-  background-color: #d8b06a;
-  border: none;
-  margin-top: 10px;
-  margin-left: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-  opacity: 0.6;
-  padding: 7px 7px 7px 7px;
-  border-radius: 6px;
-}
-
-.lang-switch .active {
-  opacity: 1;
-  border: 2px 2px 2px 2px solid rgb(0, 0, 0);
-  
-}
 .video-circle {
   margin-top: auto;
   width: 125px;
@@ -792,4 +754,43 @@ function prev() {
   transform: scale(1.1);
 }
 
+/* MOBILE */
+@media (max-width: 900px) {
+  .timeline-container {
+    padding: 30px 16px 40px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .header h1 {
+    font-size: 26px;
+    letter-spacing: 3px;
+  }
+
+  .carousel {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .controls {
+    margin-top: 40px;
+  }
+
+  .controls button {
+    margin: 0 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
 </style>

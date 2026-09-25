@@ -10,11 +10,6 @@
 
 <span class="linha"></span>
 
-<div class="idioma">
-<button @click="idioma='pt'">PT</button>
-<button @click="idioma='en'">EN</button>
-</div>
-
 </h1>
 
 <div class="conteudo">
@@ -32,20 +27,31 @@
 </template>
 
 <script>
+import { idioma } from '../../../composables/useIdioma'
+import img1 from '../../../assets/img1.png'
+import img2 from '../../../assets/img2.png'
+import img3 from '../../../assets/img3.png'
+import img4 from '../../../assets/img4.png'
+import img5 from '../../../assets/img5.png'
+import img6 from '../../../assets/img6.png'
+import img7 from '../../../assets/img7.png'
+import img8 from '../../../assets/img8.png'
 
 export default{
+
+setup(){
+  return { idioma }
+},
 
 data(){
 
 return{
 
-idioma:"pt",
-
 fotos:[
 
 {
 id:1,
-img:"/src/assets/img1.png",
+img: img1,
 titulo:{
 pt:"CASAS - CABEÇAS",
 en:"HOUSES - HEADS"
@@ -58,7 +64,7 @@ en:"With the creation of the Amazonas Philharmonic in 1997, many immigrants from
 
 {
 id:2,
-img:"/src/assets/img2.png",
+img: img2,
 titulo:{
 pt:"Objeto Religioso",
 en:"Religious Object"
@@ -71,7 +77,7 @@ en:"Description of the museum piece."
 
 {
 id:3,
-img:"/src/assets/img3.png",
+img: img3,
 titulo:{
 pt:"Artesanato",
 en:"Handcraft"
@@ -84,7 +90,7 @@ en:"Typical handcrafted object..."
 
 {
 id:4,
-img:"/src/assets/img4.png",
+img: img4,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -97,7 +103,7 @@ en:"Symbolic cultural object..."
 
 {
 id:5,
-img:"/src/assets/img5.png",
+img: img5,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -110,7 +116,7 @@ en:"Symbolic cultural object..."
 
 {
 id:6,
-img:"/src/assets/img6.png",
+img: img6,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -123,7 +129,7 @@ en:"Symbolic cultural object..."
 
 {
 id:7,
-img:"/src/assets/img7.png",
+img: img7,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -136,7 +142,7 @@ en:"Symbolic cultural object..."
 
 {
 id:8,
-img:"/src/assets/img8.png",
+img: img8,
 titulo:{
 pt:"Símbolo cultural",
 en:"Cultural Symbol"
@@ -172,7 +178,7 @@ return this.fotos.find(f => f.id === id)
 <style scoped>
 
 .pagina{
-padding:40px;
+padding:50px 40px 40px;
 text-align:center;
 background: linear-gradient(to bottom, #247d8d, #64f0e9);
 }
@@ -211,25 +217,37 @@ max-width:500px;
 text-align:left;
 }
 
-.idioma{
-position:absolute;
-right:0;
-display:flex;
-gap:10px;
-}
+/* MOBILE */
+@media (max-width: 768px) {
+  .pagina {
+    padding: 30px 20px 30px;
+  }
 
-.idioma button{
-background:transparent;
-border:1px solid white;
-padding:6px 12px;
-color:white;
-cursor:pointer;
-transition:0.3s;
-}
+  .titulo {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
 
-.idioma button:hover{
-background:white;
-color:#5e4a2e;
-}
+  .linha {
+    width: 60px;
+  }
 
+  .conteudo {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .imagem {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .texto {
+    max-width: 100%;
+    text-align: center;
+  }
+}
 </style>

@@ -35,9 +35,9 @@ async function entrar() {
 
 <style scoped>
 .login {
-  padding-top: 10%;
   max-width: 400px;
-  margin: 80px auto;
+  margin: 40px auto;
+  padding: 0 20px;
   text-align: center;
 }
 

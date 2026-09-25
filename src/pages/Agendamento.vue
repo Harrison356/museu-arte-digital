@@ -318,7 +318,7 @@ onMounted(() => {
 .agendamento {
   max-width: 850px;
   margin: 0 auto;
-  padding: 120px 24px 80px;
+  padding: 40px 24px 80px;
 }
 
 /* TITULOS */
@@ -497,7 +497,7 @@ button:disabled {
 @media (max-width: 768px) {
 
   .agendamento {
-    padding: 100px 18px 60px;
+    padding: 30px 18px 60px;
   }
 
   form {

@@ -1,8 +1,6 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-
-
-const idioma = ref('pt')
+import { onMounted } from 'vue'
+import { idioma } from '../../composables/useIdioma'
 
 const textos = {
   pt: {
@@ -57,12 +55,6 @@ onMounted(() => {
         <h1>{{ textos[idioma].titulo }}</h1>
 
         <div class="linha"></div>
-
-        <!-- BOTÃO IDIOMA -->
-        <div class="idioma">
-          <button @click="idioma='pt'">PT</button>
-          <button @click="idioma='en'">EN</button>
-        </div>
       </div>
 
       <!-- CONTEÚDO -->
@@ -98,7 +90,7 @@ onMounted(() => {
 <style scoped>
 .banho {
   background: linear-gradient(to bottom, #247d8d, #64f0e9);
-  padding: 120px 0;
+  padding: 50px 0;
 }
 
 .container {
@@ -223,31 +215,6 @@ onMounted(() => {
   font-size: 14px;
   opacity: 0.85;
 }
-.idioma{
-  position:absolute; 
-  right:0; 
-  display:flex; 
-  gap:10px;
-  
-}
-.idioma button {
-  background: transparent;
-  border: 1px solid white;
-  padding: 6px 12px;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.idioma button:hover {
-  background: white;
-  color: #5e4a2e;
-}
-
-.idioma .ativo {
-  background: white;
-  color: #5e4a2e;
-}
 /* RESPONSIVO */
 @media (max-width: 900px) {
   .conteudo {
@@ -258,7 +225,7 @@ onMounted(() => {
 @media (max-width: 900px) {
 
   .banho {
-    padding: 80px 0; /* reduz espaço gigante */
+    padding: 30px 0;
   }
 
   .titulo {
@@ -276,13 +243,6 @@ onMounted(() => {
 
   .linha {
     width: 50px;
-  }
-
-  /* BOTÃO IDIOMA CORRIGIDO */
-  .idioma {
-    position: static; /* remove absolute bugado */
-    margin-top: 10px;
-    justify-content: center;
   }
 
   /* GRID VIRA COLUNA */
@@ -326,7 +286,7 @@ onMounted(() => {
 /* ================= MOBILE PEQUENO ================= */
 @media (max-width: 480px) {
 
-  .afluente {
+  .banho {
     padding: 60px 0;
   }
 

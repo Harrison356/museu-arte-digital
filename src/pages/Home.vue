@@ -117,7 +117,7 @@ const eventos = [
 
 .home {
   min-height: calc(100vh - 80px);
-  padding-top: 100px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(#ffffff, #bbf7fa);

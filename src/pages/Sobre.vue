@@ -16,21 +16,20 @@
 
         <p>{{ textos[idioma].p2 }}</p>
       </div>
-      <div class="bg-white rounded-2xl shadow-xl p-8">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+      <div class="localizacao-card">
+          <h3 class="titulo-localizacao">
             📍 {{ textos[idioma].localizacao }}
           </h3>
           <hr>
-          <br>
 
-          <p class="text-gray-600 mb-6">
+          <p class="endereco-texto">
             {{ textos[idioma].endereco }}
           </p>
 
           <a
             href="https://www.google.com/maps?q=Paço+da+Liberdade+Manaus"
             target="_blank"
-            class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition duration-300"
+            class="btn-mapa"
           >
             {{ textos[idioma].verMapa }}
           </a>
@@ -39,18 +38,15 @@
       </div>
 
       <!-- MAPA EMBUTIDO -->
-       
-      <div class="mt-16">
-        <center>
+      <div class="mapa-wrapper">
         <iframe
-          class="w-full h-[400px] rounded-2xl shadow-lg"
+          class="mapa-iframe"
           src="https://www.google.com/maps?q=Paço+da+Liberdade+Manaus&output=embed"
           allowfullscreen=""
           loading="lazy">
         </iframe>
-        </center>
       </div>
-    
+
   </section>
 </template>
 
@@ -81,7 +77,7 @@ const textos = {
 
 <style scoped>
 .sobre {
-  padding: 40px 20px;
+  padding: 50px 20px 60px;
   background-image: linear-gradient(#ffffff, #bbf7fa);
   min-height: 100vh;
 }
@@ -111,10 +107,105 @@ h1 {
   font-size: 18px;
   line-height: 1.6;
   color: #333;
+  margin-bottom: 30px;
 }
 
 h2 {
   margin-bottom: 15px;
   color: #34495e;
+}
+
+/* CARD DE LOCALIZAÇÃO */
+.localizacao-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  text-align: left;
+}
+
+.titulo-localizacao {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 16px;
+}
+
+.localizacao-card hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-bottom: 16px;
+}
+
+.endereco-texto {
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.btn-mapa {
+  display: inline-block;
+  background: #537bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-mapa:hover {
+  background: #3f63e0;
+}
+
+/* MAPA EMBUTIDO */
+.mapa-wrapper {
+  margin-top: 50px;
+}
+
+.mapa-iframe {
+  display: block;
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .sobre {
+    padding: 30px 16px 40px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .conteudo {
+    font-size: 15px;
+  }
+
+  .localizacao-card {
+    padding: 20px;
+  }
+
+  .titulo-localizacao {
+    font-size: 18px;
+  }
+
+  .btn-mapa {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .mapa-wrapper {
+    margin-top: 30px;
+  }
+
+  .mapa-iframe {
+    height: 260px;
+  }
 }
 </style>

@@ -2,62 +2,64 @@
   <section class="admin">
     <h1>Painel de Agendamentos</h1>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Instituição</th>
-          <th>Data</th>
-          <th>Horário</th>
-          <th>Status</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <template v-for="item in agendamentos" :key="item.id">
-          
-          <!-- Linha principal -->
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
           <tr>
-            <td>{{ item.instituicao }}</td>
-            <td>{{ item.data }}</td>
-            <td>{{ item.horario }}</td>
-            <td>{{ item.status }}</td>
-            <td>
-              <button 
-                v-if="item.status !== 'confirmado'"
-                @click="confirmar(item.id)">
-                Confirmar
-              </button>
-
-              <button 
-                @click="excluir(item.id)"
-                class="btn-excluir">
-                Excluir
-              </button>
-
-              <button @click="toggleDetalhes(item.id)">
-                {{ aberto === item.id ? "Fechar" : "Ver detalhes" }}
-              </button>
-            </td>
+            <th>Instituição</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Status</th>
+            <th>Ações</th>
           </tr>
+        </thead>
 
-          <!-- Linha expandida -->
-          <tr v-if="aberto === item.id">
-            <td colspan="5" class="detalhes">
-              <p><strong>CNPJ:</strong> {{ item.cnpj }}</p>
-              <p><strong>Responsável:</strong> {{ item.responsavel }}</p>
-              <p><strong>Telefone:</strong> {{ item.telefone }}</p>
-              <p><strong>Email:</strong> {{ item.email }}</p>
-              <p><strong>Alunos:</strong> {{ item.alunos }}</p>
-              <p><strong>Professores:</strong> {{ item.professores }}</p>
-              <p><strong>Tipo de visita:</strong> {{ item.tipoVisita }}</p>
-              <p><strong>Observações:</strong> {{ item.observacoes }}</p>
-            </td>
-          </tr>
+        <tbody>
+          <template v-for="item in agendamentos" :key="item.id">
 
-        </template>
-      </tbody>
-    </table>
+            <!-- Linha principal -->
+            <tr>
+              <td>{{ item.instituicao }}</td>
+              <td>{{ item.data }}</td>
+              <td>{{ item.horario }}</td>
+              <td>{{ item.status }}</td>
+              <td class="acoes">
+                <button
+                  v-if="item.status !== 'confirmado'"
+                  @click="confirmar(item.id)">
+                  Confirmar
+                </button>
+
+                <button
+                  @click="excluir(item.id)"
+                  class="btn-excluir">
+                  Excluir
+                </button>
+
+                <button @click="toggleDetalhes(item.id)">
+                  {{ aberto === item.id ? "Fechar" : "Ver detalhes" }}
+                </button>
+              </td>
+            </tr>
+
+            <!-- Linha expandida -->
+            <tr v-if="aberto === item.id">
+              <td colspan="5" class="detalhes">
+                <p><strong>CNPJ:</strong> {{ item.cnpj }}</p>
+                <p><strong>Responsável:</strong> {{ item.responsavel }}</p>
+                <p><strong>Telefone:</strong> {{ item.telefone }}</p>
+                <p><strong>Email:</strong> {{ item.email }}</p>
+                <p><strong>Alunos:</strong> {{ item.alunos }}</p>
+                <p><strong>Professores:</strong> {{ item.professores }}</p>
+                <p><strong>Tipo de visita:</strong> {{ item.tipoVisita }}</p>
+                <p><strong>Observações:</strong> {{ item.observacoes }}</p>
+              </td>
+            </tr>
+
+          </template>
+        </tbody>
+      </table>
+    </div>
   </section>
 </template>
 
@@ -129,7 +131,12 @@ onMounted(() => {
 
 <style scoped>
 .admin {
-  padding: 2rem;
+  padding: 2.5rem 2rem 3rem;
+}
+
+.tabela-wrapper {
+  width: 100%;
+  overflow-x: auto;
 }
 
 table {
@@ -141,6 +148,11 @@ th, td {
   border: 1px solid #ccc;
   padding: 8px;
   text-align: center;
+  white-space: nowrap;
+}
+
+.acoes {
+  white-space: normal;
 }
 
 button {
@@ -161,9 +173,32 @@ button {
   text-align: left;
   background: #f3f4f6;
   padding: 15px;
+  white-space: normal;
 }
 
 .detalhes p {
   margin: 5px 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .admin {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  button {
+    padding: 5px 9px;
+    font-size: 12px;
+  }
 }
 </style>

@@ -94,7 +94,7 @@ const exposicoes = [
 
 <style scoped>
 .expo {
-  padding: 140px 10%;
+  padding: 50px 10%;
   background-image: linear-gradient(#ffffff, #bbf7fa);
 }
 
@@ -134,5 +134,29 @@ h1 {
 
 .info {
   padding: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .expo {
+    padding: 30px 6% 50px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+
+  .grid {
+    gap: 24px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .info {
+    padding: 18px;
+  }
 }
 </style>
