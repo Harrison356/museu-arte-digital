@@ -73,7 +73,7 @@ onMounted(() => {
         <div class="imagens fade-in">
 
   <router-link to="/" class="card">
-    <img src="/src/assets/arqueologia.png" alt="">
+    <img src="/src/assets/arqueologia.webp" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].videos }}</h3>
       <span>{{ textos[idioma].videosDesc }}</span>

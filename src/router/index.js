@@ -1,9 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { onAuthStateChanged } from "firebase/auth"
-
-// 🔥 IMPORTANTE: usa o auth do firebase.js
-import { auth } from '../services/firebase'
-
 
 // Lazy Loading
 const Home = () => import('../pages/Home.vue')
@@ -75,20 +70,16 @@ const router = createRouter({
 })
 
 // 🔐 Proteção + título
-router.beforeEach(async (to, from, next) => {
-
+router.beforeEach(async (to) => {
   if (to.meta.title) {
     document.title = to.meta.title
   }
 
-  const user = await new Promise((resolve) => {
-    onAuthStateChanged(auth, resolve)
-  })
-
-  if (to.meta.requiresAuth && !user) {
-    next('/login')
-  } else {
-    next()
+  // Firebase só é carregado quando a rota exige login
+  if (to.meta.requiresAuth) {
+    const { auth } = await import('../services/firebase')
+    await auth.authStateReady()
+    if (!auth.currentUser) return '/login'
   }
 })
 

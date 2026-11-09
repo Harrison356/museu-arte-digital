@@ -631,7 +631,6 @@ function prev() {
   min-height: 100vh;
   padding: 60px 20px;
   background-color: #d8b06a;
-  background-image: url('/src/assets/textura-mapa.png'); /* coloque sua textura aqui */
   background-size: cover;
   background-blend-mode: multiply;
 }

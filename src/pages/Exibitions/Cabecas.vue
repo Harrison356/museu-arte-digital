@@ -73,7 +73,7 @@ onMounted(() => {
         <div class="imagens fade-in">
 
   <router-link to="/galeria" class="card">
-    <img src="/src/assets/casas-cabecas.png" alt="">
+    <img src="/src/assets/casas-cabecas.webp" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].videos }}</h3>
       <span>{{ textos[idioma].videosDesc }}</span>
@@ -81,7 +81,7 @@ onMounted(() => {
   </router-link>
 
   <router-link to="/arquitetura" class="card">
-    <img src="/src/assets/arquitetura.png" alt="">
+    <img src="/src/assets/arquitetura.webp" alt="">
     <div class="overlay">
       <h3>{{ textos[idioma].linha }}</h3>
       <span>{{ textos[idioma].linhaDesc }}</span>

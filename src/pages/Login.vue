@@ -14,7 +14,8 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth"
+import { signInWithEmailAndPassword } from "firebase/auth"
+import { auth } from "../services/firebase"
 
 const email = ref("")
 const senha = ref("")
@@ -22,8 +23,6 @@ const erro = ref("")
 const router = useRouter()
 
 async function entrar() {
-  const auth = getAuth()
-
   try {
     await signInWithEmailAndPassword(auth, email.value, senha.value)
     router.push("/admin")

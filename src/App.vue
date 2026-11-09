@@ -1,7 +1,10 @@
 <script setup>
+import { defineAsyncComponent } from 'vue'
 import { RouterView } from 'vue-router'
 import Header from './components/Header.vue'
-import ChatBot from './components/ChatBot.vue'
+
+// Chatbot carregado à parte para não atrasar a primeira renderização
+const ChatBot = defineAsyncComponent(() => import('./components/ChatBot.vue'))
 </script>
 
 <template>
