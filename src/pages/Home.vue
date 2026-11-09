@@ -37,6 +37,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { idioma } from '../composables/useIdioma'
+import imgArquitetura from '../assets/home-arquitetura.webp'
+import imgCultura from '../assets/home-cultura.webp'
+import imgMemoria from '../assets/home-memoria.webp'
 
 const textos = {
   pt: {
@@ -70,7 +73,7 @@ onUnmounted(() => {
 
 const eventos = [
   {
-    img: 'https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1000&auto=format&fit=crop',
+    img: imgArquitetura,
     titulo: {
       pt: 'Arquitetura Histórica',
       en: 'Historic Architecture'
@@ -81,7 +84,7 @@ const eventos = [
     }
   },
   {
-    img: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1000&auto=format&fit=crop',
+    img: imgCultura,
     titulo: {
       pt: 'Cultura Amazônica',
       en: 'Amazon Culture'
@@ -92,7 +95,7 @@ const eventos = [
     }
   },
   {
-    img: 'https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=1000&auto=format&fit=crop',
+    img: imgMemoria,
     titulo: {
       pt: 'Memória e Patrimônio',
       en: 'Memory & Heritage'
