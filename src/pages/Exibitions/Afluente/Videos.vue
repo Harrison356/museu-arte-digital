@@ -19,8 +19,8 @@
     <!-- GRID DE VIDEOS -->
     <div class="grid-videos">
       <div 
-        v-for="video in videos" 
-        :key="video.id"
+        v-for="(video, i) in videos" 
+        :key="i"
         class="card-video"
         @click="abrirVideo(video.id)"
       >
@@ -68,21 +68,21 @@ const textos = {
 
 const videos = [
   {
-    id: "dQw4w9WgXcQ",
+    id: "nnf_W4pJEZ4",
     titulo: {
       pt: "História de Manaus",
       en: "History of Manaus"
     }
   },
   {
-    id: "3tmd-ClpJxA",
+    id: "nnf_W4pJEZ4",
     titulo: {
       pt: "Ciclo da Borracha",
       en: "Rubber Cycle"
     }
   },
   {
-    id: "L_jWHffIx5E",
+    id: "nnf_W4pJEZ4",
     titulo: {
       pt: "Teatro Amazonas",
       en: "Amazonas Theater"
